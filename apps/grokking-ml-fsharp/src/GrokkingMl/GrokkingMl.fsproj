@@ -8,6 +8,7 @@
   <ItemGroup>
     <Compile Include="Ch03LinearRegression.fs" />
     <Compile Include="Ch04Regularization.fs" />
+    <Compile Include="Ch05Perceptron.fs" />
   </ItemGroup>
 
 </Project>
