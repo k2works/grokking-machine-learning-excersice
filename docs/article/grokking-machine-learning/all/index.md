@@ -26,6 +26,7 @@ Python・Kotlin・F# の 3 言語で同じ機械学習アルゴリズムを実�
 | 08 | ナイーブベイズ | [3 言語比較](ch08-naive-bayes.md) |
 | 09 | 決定木 | [3 言語比較](ch09-decision-trees.md) |
 | 10 | ニューラルネットワーク | [3 言語比較](ch10-neural-networks.md) |
+| 11 | サポートベクターマシンとカーネル法 | [3 言語比較](ch11-svm.md) |
 
 ## 参照
 

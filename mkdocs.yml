@@ -96,6 +96,7 @@ nav:
               - 第 8 章 ナイーブベイズ: article/grokking-machine-learning/all/ch08-naive-bayes.md
               - 第 9 章 決定木: article/grokking-machine-learning/all/ch09-decision-trees.md
               - 第 10 章 ニューラルネットワーク: article/grokking-machine-learning/all/ch10-neural-networks.md
+              - 第 11 章 SVM とカーネル法: article/grokking-machine-learning/all/ch11-svm.md
           - Python 版:
               - 概要: article/grokking-machine-learning/python/index.md
               - 第 3 章 線形回帰: article/grokking-machine-learning/python/ch03.md
@@ -106,6 +107,7 @@ nav:
               - 第 8 章 ナイーブベイズ: article/grokking-machine-learning/python/ch08.md
               - 第 9 章 決定木: article/grokking-machine-learning/python/ch09.md
               - 第 10 章 ニューラルネットワーク: article/grokking-machine-learning/python/ch10.md
+              - 第 11 章 SVM とカーネル法: article/grokking-machine-learning/python/ch11.md
           - Kotlin 版:
               - 概要: article/grokking-machine-learning/kotlin/index.md
               - 第 3 章 線形回帰: article/grokking-machine-learning/kotlin/ch03.md
@@ -116,6 +118,7 @@ nav:
               - 第 8 章 ナイーブベイズ: article/grokking-machine-learning/kotlin/ch08.md
               - 第 9 章 決定木: article/grokking-machine-learning/kotlin/ch09.md
               - 第 10 章 ニューラルネットワーク: article/grokking-machine-learning/kotlin/ch10.md
+              - 第 11 章 SVM とカーネル法: article/grokking-machine-learning/kotlin/ch11.md
           - F# 版:
               - 概要: article/grokking-machine-learning/fsharp/index.md
               - 第 3 章 線形回帰: article/grokking-machine-learning/fsharp/ch03.md
@@ -126,6 +129,7 @@ nav:
               - 第 8 章 ナイーブベイズ: article/grokking-machine-learning/fsharp/ch08.md
               - 第 9 章 決定木: article/grokking-machine-learning/fsharp/ch09.md
               - 第 10 章 ニューラルネットワーク: article/grokking-machine-learning/fsharp/ch10.md
+              - 第 11 章 SVM とカーネル法: article/grokking-machine-learning/fsharp/ch11.md
       - 実践データベース設計：基幹業務システム編: article/practical-database-design/index.md
       - Docker/Kubernetes 実践コンテナ解説: article/getting-start-docker-kubernetes/index.md
   - リファレンス:
