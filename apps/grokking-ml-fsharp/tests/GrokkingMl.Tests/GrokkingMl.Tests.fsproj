@@ -15,6 +15,7 @@
     <Compile Include="Ch09DecisionTreesTests.fs" />
     <Compile Include="Ch10NeuralNetworksTests.fs" />
     <Compile Include="Ch11SvmTests.fs" />
+    <Compile Include="Ch12EnsemblesTests.fs" />
   </ItemGroup>
 
   <ItemGroup>

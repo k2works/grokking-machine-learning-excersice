@@ -15,6 +15,7 @@
     <Compile Include="Ch09DecisionTrees.fs" />
     <Compile Include="Ch10NeuralNetworks.fs" />
     <Compile Include="Ch11Svm.fs" />
+    <Compile Include="Ch12Ensembles.fs" />
   </ItemGroup>
 
 </Project>
