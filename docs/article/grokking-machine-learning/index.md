@@ -20,6 +20,7 @@
 | 07 | 分類モデルの評価指標 | [3 言語比較](all/ch07-metrics.md) |
 | 08 | ナイーブベイズ | [3 言語比較](all/ch08-naive-bayes.md) |
 | 09 | 決定木 | [3 言語比較](all/ch09-decision-trees.md) |
+| 10 | ニューラルネットワーク | [3 言語比較](all/ch10-neural-networks.md) |
 
 ## 言語別解説
 
@@ -54,7 +55,7 @@ F#（.NET 10）のレコード型・判別共用体・パイプライン演算�
 | 07 | 分類モデルの評価指標 | [ch07](python/ch07.md) | [ch07](kotlin/ch07.md) | [ch07](fsharp/ch07.md) |
 | 08 | ナイーブベイズ | [ch08](python/ch08.md) | [ch08](kotlin/ch08.md) | [ch08](fsharp/ch08.md) |
 | 09 | 決定木 | [ch09](python/ch09.md) | [ch09](kotlin/ch09.md) | [ch09](fsharp/ch09.md) |
-| 10 | ニューラルネットワーク | 執筆予定 | 執筆予定 | 執筆予定 |
+| 10 | ニューラルネットワーク | [ch10](python/ch10.md) | [ch10](kotlin/ch10.md) | [ch10](fsharp/ch10.md) |
 | 11 | サポートベクターマシンとカーネル法 | 執筆予定 | 執筆予定 | 執筆予定 |
 | 12 | アンサンブル学習 | 執筆予定 | 執筆予定 | 執筆予定 |
 | 13 | エンドツーエンドの実例 | 執筆予定 | 執筆予定 | 執筆予定 |
