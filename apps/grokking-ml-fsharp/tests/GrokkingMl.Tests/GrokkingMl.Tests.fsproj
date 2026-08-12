@@ -9,6 +9,7 @@
     <Compile Include="Ch03LinearRegressionTests.fs" />
     <Compile Include="Ch04RegularizationTests.fs" />
     <Compile Include="Ch05PerceptronTests.fs" />
+    <Compile Include="Ch06LogisticRegressionTests.fs" />
   </ItemGroup>
 
   <ItemGroup>
