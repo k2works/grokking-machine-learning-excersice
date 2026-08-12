@@ -24,6 +24,7 @@ Python・Kotlin・F# の 3 言語で同じ機械学習アルゴリズムを実�
 | 06 | ロジスティック回帰 | [3 言語比較](ch06-logistic-regression.md) |
 | 07 | 分類モデルの評価指標 | [3 言語比較](ch07-metrics.md) |
 | 08 | ナイーブベイズ | [3 言語比較](ch08-naive-bayes.md) |
+| 09 | 決定木 | [3 言語比較](ch09-decision-trees.md) |
 
 ## 参照
 

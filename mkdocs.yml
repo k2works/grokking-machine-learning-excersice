@@ -94,6 +94,7 @@ nav:
               - 第 6 章 ロジスティック回帰: article/grokking-machine-learning/all/ch06-logistic-regression.md
               - 第 7 章 分類モデルの評価指標: article/grokking-machine-learning/all/ch07-metrics.md
               - 第 8 章 ナイーブベイズ: article/grokking-machine-learning/all/ch08-naive-bayes.md
+              - 第 9 章 決定木: article/grokking-machine-learning/all/ch09-decision-trees.md
           - Python 版:
               - 概要: article/grokking-machine-learning/python/index.md
               - 第 3 章 線形回帰: article/grokking-machine-learning/python/ch03.md
@@ -102,6 +103,7 @@ nav:
               - 第 6 章 ロジスティック回帰: article/grokking-machine-learning/python/ch06.md
               - 第 7 章 分類モデルの評価指標: article/grokking-machine-learning/python/ch07.md
               - 第 8 章 ナイーブベイズ: article/grokking-machine-learning/python/ch08.md
+              - 第 9 章 決定木: article/grokking-machine-learning/python/ch09.md
           - Kotlin 版:
               - 概要: article/grokking-machine-learning/kotlin/index.md
               - 第 3 章 線形回帰: article/grokking-machine-learning/kotlin/ch03.md
@@ -110,6 +112,7 @@ nav:
               - 第 6 章 ロジスティック回帰: article/grokking-machine-learning/kotlin/ch06.md
               - 第 7 章 分類モデルの評価指標: article/grokking-machine-learning/kotlin/ch07.md
               - 第 8 章 ナイーブベイズ: article/grokking-machine-learning/kotlin/ch08.md
+              - 第 9 章 決定木: article/grokking-machine-learning/kotlin/ch09.md
           - F# 版:
               - 概要: article/grokking-machine-learning/fsharp/index.md
               - 第 3 章 線形回帰: article/grokking-machine-learning/fsharp/ch03.md
@@ -118,6 +121,7 @@ nav:
               - 第 6 章 ロジスティック回帰: article/grokking-machine-learning/fsharp/ch06.md
               - 第 7 章 分類モデルの評価指標: article/grokking-machine-learning/fsharp/ch07.md
               - 第 8 章 ナイーブベイズ: article/grokking-machine-learning/fsharp/ch08.md
+              - 第 9 章 決定木: article/grokking-machine-learning/fsharp/ch09.md
       - 実践データベース設計：基幹業務システム編: article/practical-database-design/index.md
       - Docker/Kubernetes 実践コンテナ解説: article/getting-start-docker-kubernetes/index.md
   - リファレンス:
