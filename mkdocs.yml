@@ -88,6 +88,8 @@ nav:
           - アウトライン: article/grokking-machine-learning/outline.md
           - 3 言語統合比較:
               - 目次: article/grokking-machine-learning/all/index.md
+              - 第 1 章 機械学習とは何か: article/grokking-machine-learning/all/ch01-what-is-machine-learning.md
+              - 第 2 章 機械学習の種類: article/grokking-machine-learning/all/ch02-types-of-machine-learning.md
               - 第 3 章 線形回帰: article/grokking-machine-learning/all/ch03-linear-regression.md
               - 第 4 章 過学習・未学習と正則化: article/grokking-machine-learning/all/ch04-regularization.md
               - 第 5 章 パーセプトロン: article/grokking-machine-learning/all/ch05-perceptron.md
