@@ -23,6 +23,7 @@
 | 10 | ニューラルネットワーク | [3 言語比較](all/ch10-neural-networks.md) |
 | 11 | サポートベクターマシンとカーネル法 | [3 言語比較](all/ch11-svm.md) |
 | 12 | アンサンブル学習 | [3 言語比較](all/ch12-ensembles.md) |
+| 13 | エンドツーエンドの実例 | [3 言語比較](all/ch13-end-to-end.md) |
 
 ## 言語別解説
 
@@ -60,7 +61,7 @@ F#（.NET 10）のレコード型・判別共用体・パイプライン演算�
 | 10 | ニューラルネットワーク | [ch10](python/ch10.md) | [ch10](kotlin/ch10.md) | [ch10](fsharp/ch10.md) |
 | 11 | サポートベクターマシンとカーネル法 | [ch11](python/ch11.md) | [ch11](kotlin/ch11.md) | [ch11](fsharp/ch11.md) |
 | 12 | アンサンブル学習 | [ch12](python/ch12.md) | [ch12](kotlin/ch12.md) | [ch12](fsharp/ch12.md) |
-| 13 | エンドツーエンドの実例 | 執筆予定 | 執筆予定 | 執筆予定 |
+| 13 | エンドツーエンドの実例 | [ch13](python/ch13.md) | [ch13](kotlin/ch13.md) | [ch13](fsharp/ch13.md) |
 
 執筆計画の詳細は [アウトライン](outline.md) を参照してください。
 
