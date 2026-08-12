@@ -13,6 +13,7 @@
     <Compile Include="Ch07Metrics.fs" />
     <Compile Include="Ch08NaiveBayes.fs" />
     <Compile Include="Ch09DecisionTrees.fs" />
+    <Compile Include="Ch10NeuralNetworks.fs" />
   </ItemGroup>
 
 </Project>
