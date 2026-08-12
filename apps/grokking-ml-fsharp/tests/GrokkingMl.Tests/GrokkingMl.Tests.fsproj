@@ -16,6 +16,7 @@
     <Compile Include="Ch10NeuralNetworksTests.fs" />
     <Compile Include="Ch11SvmTests.fs" />
     <Compile Include="Ch12EnsemblesTests.fs" />
+    <Compile Include="Ch13EndToEndTests.fs" />
   </ItemGroup>
 
   <ItemGroup>
