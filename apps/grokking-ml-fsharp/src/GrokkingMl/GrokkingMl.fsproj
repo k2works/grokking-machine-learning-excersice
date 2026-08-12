@@ -10,6 +10,7 @@
     <Compile Include="Ch04Regularization.fs" />
     <Compile Include="Ch05Perceptron.fs" />
     <Compile Include="Ch06LogisticRegression.fs" />
+    <Compile Include="Ch07Metrics.fs" />
   </ItemGroup>
 
 </Project>
