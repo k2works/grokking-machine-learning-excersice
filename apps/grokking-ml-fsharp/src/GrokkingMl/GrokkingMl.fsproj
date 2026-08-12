@@ -11,6 +11,7 @@
     <Compile Include="Ch05Perceptron.fs" />
     <Compile Include="Ch06LogisticRegression.fs" />
     <Compile Include="Ch07Metrics.fs" />
+    <Compile Include="Ch08NaiveBayes.fs" />
   </ItemGroup>
 
 </Project>

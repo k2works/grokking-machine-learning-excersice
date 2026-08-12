@@ -11,6 +11,7 @@
     <Compile Include="Ch05PerceptronTests.fs" />
     <Compile Include="Ch06LogisticRegressionTests.fs" />
     <Compile Include="Ch07MetricsTests.fs" />
+    <Compile Include="Ch08NaiveBayesTests.fs" />
   </ItemGroup>
 
   <ItemGroup>
