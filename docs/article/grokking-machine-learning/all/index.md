@@ -23,6 +23,7 @@ Python・Kotlin・F# の 3 言語で同じ機械学習アルゴリズムを実�
 | 05 | パーセプトロン | [3 言語比較](ch05-perceptron.md) |
 | 06 | ロジスティック回帰 | [3 言語比較](ch06-logistic-regression.md) |
 | 07 | 分類モデルの評価指標 | [3 言語比較](ch07-metrics.md) |
+| 08 | ナイーブベイズ | [3 言語比較](ch08-naive-bayes.md) |
 
 ## 参照
 
