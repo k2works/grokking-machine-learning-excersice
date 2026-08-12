@@ -14,6 +14,7 @@
     <Compile Include="Ch08NaiveBayes.fs" />
     <Compile Include="Ch09DecisionTrees.fs" />
     <Compile Include="Ch10NeuralNetworks.fs" />
+    <Compile Include="Ch11Svm.fs" />
   </ItemGroup>
 
 </Project>
