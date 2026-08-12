@@ -1,0 +1,28 @@
+# 依存パッケージ
+node_modules/
+
+# 環境変数（.env.example と .env.vault のみ追跡する）
+.env
+.env.*
+!.env.example
+!.env.vault
+
+# IDE / エディタ
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# ビルド成果物
+site/
+dist/
+build/
+
+# ログ・一時ファイル
+*.log
+tmp/
+.cache/
+
+# AI エージェントのローカル設定
+.claude/settings.local.json
+.claude/agent-memory/
