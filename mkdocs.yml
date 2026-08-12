@@ -83,6 +83,21 @@ nav:
       - Grokking Functional Programming: article/grokkingfp/index.md
       - Grokking Concurrency: article/grokking-concurrency/index.md
       - 関数型デザイン - 原則、パターン、実践: article/functional-desgin-ppp/index.md
+      - Grokking Machine Learning:
+          - 概要: article/grokking-machine-learning/index.md
+          - アウトライン: article/grokking-machine-learning/outline.md
+          - 3 言語統合比較:
+              - 目次: article/grokking-machine-learning/all/index.md
+              - 第 3 章 線形回帰: article/grokking-machine-learning/all/ch03-linear-regression.md
+          - Python 版:
+              - 概要: article/grokking-machine-learning/python/index.md
+              - 第 3 章 線形回帰: article/grokking-machine-learning/python/ch03.md
+          - Kotlin 版:
+              - 概要: article/grokking-machine-learning/kotlin/index.md
+              - 第 3 章 線形回帰: article/grokking-machine-learning/kotlin/ch03.md
+          - F# 版:
+              - 概要: article/grokking-machine-learning/fsharp/index.md
+              - 第 3 章 線形回帰: article/grokking-machine-learning/fsharp/ch03.md
       - 実践データベース設計：基幹業務システム編: article/practical-database-design/index.md
       - Docker/Kubernetes 実践コンテナ解説: article/getting-start-docker-kubernetes/index.md
   - リファレンス:
