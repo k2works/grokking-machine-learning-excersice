@@ -21,6 +21,7 @@ Python・Kotlin・F# の 3 言語で同じ機械学習アルゴリズムを実�
 | 03 | 線形回帰 | [3 言語比較](ch03-linear-regression.md) |
 | 04 | 過学習・未学習と正則化 | [3 言語比較](ch04-regularization.md) |
 | 05 | パーセプトロン | [3 言語比較](ch05-perceptron.md) |
+| 06 | ロジスティック回帰 | [3 言語比較](ch06-logistic-regression.md) |
 
 ## 参照
 
