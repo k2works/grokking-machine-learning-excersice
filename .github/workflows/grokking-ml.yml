@@ -55,7 +55,7 @@ jobs:
         uses: gradle/actions/setup-gradle@v4
 
       - name: Test
-        run: gradle test
+        run: ./gradlew test
 
   fsharp:
     runs-on: ubuntu-latest

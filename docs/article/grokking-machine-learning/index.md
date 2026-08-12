@@ -60,7 +60,7 @@ F#（.NET 10）のレコード型・判別共用体・パイプライン演算�
 | 言語 | ディレクトリ | テスト実行 |
 | :--- | :--- | :--- |
 | Python | `apps/grokking-ml-python` | `uv run pytest` |
-| Kotlin | `apps/grokking-ml-kotlin` | `gradle test` |
+| Kotlin | `apps/grokking-ml-kotlin` | `./gradlew test` |
 | F# | `apps/grokking-ml-fsharp` | `dotnet test` |
 
 ## 参照

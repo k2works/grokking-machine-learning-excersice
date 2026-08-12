@@ -20,13 +20,13 @@ Kotlin 2.0（JVM 21）を使い、機械学習アルゴリズムを **標準ラ�
 nix develop .#kotlin
 ```
 
-Nix の `kotlin` devShell が JDK 21・Kotlin コンパイラ・Gradle を提供します。Gradle Wrapper は同梱していないため、devShell の `gradle` コマンドを直接使ってください。
+Nix の `kotlin` devShell が JDK 21・Kotlin コンパイラ・Gradle を提供します。ビルドには Gradle Wrapper（`./gradlew`）を使うため、devShell の Gradle バージョンに関係なく同じ結果になります。
 
 ### テストの実行
 
 ```bash
 cd apps/grokking-ml-kotlin
-gradle test
+./gradlew test
 ```
 
 ## 目次

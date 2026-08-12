@@ -14,7 +14,7 @@
 | 言語 | バージョン | 実行環境 | ビルド/テスト | サンプル実装 |
 | :--- | :--- | :--- | :--- | :--- |
 | Python | 3.11+ | Nix devShell `python` | uv + pytest + ruff | `apps/grokking-ml-python` |
-| Kotlin | 2.0 (JVM 21) | Nix devShell `kotlin` | Gradle + kotlin.test | `apps/grokking-ml-kotlin` |
+| Kotlin | 2.0 (JVM 21) | Nix devShell `kotlin` | Gradle Wrapper + kotlin.test | `apps/grokking-ml-kotlin` |
 | F# | .NET 10 | Nix devShell `dotnet` | dotnet + xUnit | `apps/grokking-ml-fsharp` |
 
 ## 章構成
@@ -66,10 +66,10 @@ apps/
 | :--- | :--- | :--- |
 | 実行環境 | Nix devShell `python` / `kotlin` / `dotnet`（`kotlin` は本シリーズで追加） | 完了 |
 | Python 実装雛形 | uv プロジェクト、pytest、ruff | 完了 |
-| Kotlin 実装雛形 | Gradle Kotlin DSL、kotlin.test、JVM 21 | 完了 |
+| Kotlin 実装雛形 | Gradle Kotlin DSL、Gradle Wrapper、kotlin.test、JVM 21 | 完了 |
 | F# 実装雛形 | ソリューション + classlib + xUnit | 完了 |
 | 記事ディレクトリ | `docs/article/grokking-machine-learning/` | 完了 |
-| CI | サンプル実装 3 言語のテスト実行 | 未着手 |
+| CI | サンプル実装 3 言語のテスト実行（`.github/workflows/grokking-ml.yml`） | 完了 |
 
 ## 章別執筆計画
 
