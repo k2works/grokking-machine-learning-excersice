@@ -17,6 +17,7 @@
 | 04 | 過学習・未学習と正則化 | [3 言語比較](all/ch04-regularization.md) |
 | 05 | パーセプトロン | [3 言語比較](all/ch05-perceptron.md) |
 | 06 | ロジスティック回帰 | [3 言語比較](all/ch06-logistic-regression.md) |
+| 07 | 分類モデルの評価指標 | [3 言語比較](all/ch07-metrics.md) |
 
 ## 言語別解説
 
@@ -48,7 +49,7 @@ F#（.NET 10）のレコード型・判別共用体・パイプライン演算�
 | 04 | 過学習・未学習と正則化 | [ch04](python/ch04.md) | [ch04](kotlin/ch04.md) | [ch04](fsharp/ch04.md) |
 | 05 | パーセプトロン | [ch05](python/ch05.md) | [ch05](kotlin/ch05.md) | [ch05](fsharp/ch05.md) |
 | 06 | ロジスティック回帰 | [ch06](python/ch06.md) | [ch06](kotlin/ch06.md) | [ch06](fsharp/ch06.md) |
-| 07 | 分類モデルの評価指標 | 執筆予定 | 執筆予定 | 執筆予定 |
+| 07 | 分類モデルの評価指標 | [ch07](python/ch07.md) | [ch07](kotlin/ch07.md) | [ch07](fsharp/ch07.md) |
 | 08 | ナイーブベイズ | 執筆予定 | 執筆予定 | 執筆予定 |
 | 09 | 決定木 | 執筆予定 | 執筆予定 | 執筆予定 |
 | 10 | ニューラルネットワーク | 執筆予定 | 執筆予定 | 執筆予定 |
