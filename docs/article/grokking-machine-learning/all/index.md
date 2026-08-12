@@ -18,6 +18,8 @@ Python・Kotlin・F# の 3 言語で同じ機械学習アルゴリズムを実�
 
 | 章 | タイトル | 統合記事 |
 | :--- | :--- | :--- |
+| 01 | 機械学習とは何か | [概念解説](ch01-what-is-machine-learning.md) |
+| 02 | 機械学習の種類 | [概念解説](ch02-types-of-machine-learning.md) |
 | 03 | 線形回帰 | [3 言語比較](ch03-linear-regression.md) |
 | 04 | 過学習・未学習と正則化 | [3 言語比較](ch04-regularization.md) |
 | 05 | パーセプトロン | [3 言語比較](ch05-perceptron.md) |
