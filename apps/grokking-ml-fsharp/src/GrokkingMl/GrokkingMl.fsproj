@@ -12,6 +12,7 @@
     <Compile Include="Ch06LogisticRegression.fs" />
     <Compile Include="Ch07Metrics.fs" />
     <Compile Include="Ch08NaiveBayes.fs" />
+    <Compile Include="Ch09DecisionTrees.fs" />
   </ItemGroup>
 
 </Project>
