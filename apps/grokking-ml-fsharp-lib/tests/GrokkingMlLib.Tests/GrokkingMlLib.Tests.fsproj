@@ -20,6 +20,7 @@
     <Compile Include="Nb07NaiveBayesTests.fs" />
     <Compile Include="Nb08GiniEntropyTests.fs" />
     <Compile Include="Nb09AppRecommendationsTests.fs" />
+    <Compile Include="Nb10DecisionTreeBoundaryTests.fs" />
   </ItemGroup>
 
   <ItemGroup>
