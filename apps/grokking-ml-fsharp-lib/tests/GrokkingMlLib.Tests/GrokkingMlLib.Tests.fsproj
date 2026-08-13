@@ -15,6 +15,7 @@
     <Compile Include="Nb02HousePricesTests.fs" />
     <Compile Include="Nb03PolynomialRegularizationTests.fs" />
     <Compile Include="Nb04PerceptronTests.fs" />
+    <Compile Include="Nb05LogisticRegressionTests.fs" />
   </ItemGroup>
 
   <ItemGroup>

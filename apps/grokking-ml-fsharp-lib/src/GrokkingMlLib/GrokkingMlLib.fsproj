@@ -15,6 +15,7 @@
     <Compile Include="Nb02HousePrices.fs" />
     <Compile Include="Nb03PolynomialRegularization.fs" />
     <Compile Include="Nb04Perceptron.fs" />
+    <Compile Include="Nb05LogisticRegression.fs" />
   </ItemGroup>
 
   <ItemGroup>

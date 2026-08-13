@@ -91,11 +91,11 @@ F#（.NET 10）のレコード型・判別共用体・パイプライン演算�
 | 自前実装 | Python | `apps/grokking-ml-python` | `uv run pytest` | 179 |
 | 自前実装 | Kotlin | `apps/grokking-ml-kotlin` | `./gradlew test` | 178 |
 | 自前実装 | F# | `apps/grokking-ml-fsharp` | `dotnet test` | 176 |
-| ライブラリ | Python | `apps/grokking-ml-python-lib` | `uv run pytest` | 52 |
-| ライブラリ | Kotlin | `apps/grokking-ml-kotlin-lib` | `./gradlew test` | 46 |
-| ライブラリ | F# | `apps/grokking-ml-fsharp-lib` | `dotnet test` | 47 |
+| ライブラリ | Python | `apps/grokking-ml-python-lib` | `uv run pytest` | 67 |
+| ライブラリ | Kotlin | `apps/grokking-ml-kotlin-lib` | `./gradlew test` | 59 |
+| ライブラリ | F# | `apps/grokking-ml-fsharp-lib` | `dotnet test` | 60 |
 
-ライブラリ版は 22 本中 4 本を執筆済みです。
+ライブラリ版は 22 本中 5 本を執筆済みです。
 
 記事に載せたコードと数値は、すべてこの実装から転記しています。
 

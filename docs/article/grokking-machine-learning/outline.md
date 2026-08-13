@@ -174,7 +174,7 @@ CI では `libomp-dev` を入れて解決しています。
 | スモークテスト | 各言語で主要ライブラリが学習まで走ることを検証（Python 5・Kotlin 6・F# 6） | 完了 |
 | 記事ディレクトリ | `docs/article/grokking-machine-learning/lib/{python,kotlin,fsharp}/` | 完了 |
 | CI | `.github/workflows/grokking-ml-lib.yml`（3 言語、Kotlin は JDK 21 / 25） | 完了 |
-| 22 本の執筆 | 3 言語 × 22 本 | #01〜#04 完了（残り 18 本） |
+| 22 本の執筆 | 3 言語 × 22 本 | #01〜#05 完了（残り 17 本） |
 | ノートブック | Jupyter / Kotlin Notebook / Polyglot Notebook | 未着手 |
 
 ### ノートブック別執筆計画
@@ -187,7 +187,7 @@ CI では `libomp-dev` を入れて解決しています。
 | 02 | 03 | `House_price_predictions` | one-hot でランク落ちする設計行列（執筆済み） | `get_dummies` 相当を自前で書く（執筆済み） | Math.NET SVD の打ち切り閾値問題（執筆済み） |
 | 03 | 04 | `Polynomial_regression_regularization` | 正則化が解を再現可能にする（執筆済み） | Smile の LASSO は厳密なゼロを出さない（執筆済み） | Ridge・Lasso を自前で実装（執筆済み） |
 | 04 | 05 | `Coding_perceptron_algorithm` | 原著のトリック 2 版の挙動差（執筆済み） | Smile にパーセプトロンが無く線形 SVM で代替（執筆済み） | ML.NET `AveragedPerceptron`（執筆済み） |
-| 05 | 06 | `Coding_logistic_regression` | `LogisticRegression` のソルバ選択 | Smile `LogisticRegression` | `SdcaLogisticRegression` と正規化 |
+| 05 | 06 | `Coding_logistic_regression` | 原著の対数損失の別表現が誤り（執筆済み） | `fit` が無く `binomial`・既定で正則化なし（執筆済み） | `LbfgsLogisticRegression`（執筆済み） |
 | 06 | 06 | `Sentiment_analysis_IMDB` | `CountVectorizer` のスパース行列 | Kotlin での語彙構築（既製の Vectorizer が無い） | ML.NET `FeaturizeText` |
 | 07 | 08 | `Coding_naive_Bayes` | pandas だけで書かれた原著をそのまま踏襲 | DataFrame の groupBy | Deedle の集計 |
 | 08 | 09 | `Gini_entropy_calculations` | NumPy のベクトル演算 | Multik の要素演算 | Math.NET のベクトル演算 |
