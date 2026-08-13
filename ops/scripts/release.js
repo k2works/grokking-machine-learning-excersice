@@ -242,6 +242,13 @@ function collectFilesToStage(rootDir) {
     files.push(path.join(relative, 'package.json'));
   }
 
+  // npm version はロックファイルのバージョンも書き換える。
+  // ステージし忘れると、リリース後に working tree が汚れたまま残る。
+  const lockfile = 'package-lock.json';
+  if (fs.existsSync(path.join(rootDir, lockfile))) {
+    files.push(lockfile);
+  }
+
   return files;
 }
 
