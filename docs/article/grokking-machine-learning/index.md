@@ -37,7 +37,7 @@ Python 3.11+ を標準ライブラリのみで使い、`dataclass` と純関数�
 
 ### Kotlin 版
 
-Kotlin 2.0（JVM 21）の `data class` と不変更新で、型安全にアルゴリズムを表現します。
+Kotlin 2.2（JVM 21）の `data class` と不変更新で、型安全にアルゴリズムを表現します。
 
 - [Kotlin 解説](kotlin/index.md)
 

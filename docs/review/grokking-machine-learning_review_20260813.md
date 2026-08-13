@@ -9,8 +9,10 @@
 
 ## レビュー実施上の注記
 
-マルチエージェント（`xp-programmer` / `xp-tester` / `xp-architect` / `xp-technical-writer` / `xp-user-representative`）を並列起動したが、**各エージェントの最終レポートが呼び出し元へ返らなかった**（アイドル通知のみ届き、本文が届かない状態）。
-そのため `developing-review` スキルに定義されたフォールバック手順に従い、5 視点を逐次レビューに切り替えて実施した。
+マルチエージェント（`xp-programmer` / `xp-tester` / `xp-architect` / `xp-technical-writer` / `xp-user-representative`）を並列起動したが、4 つのエージェントは最終レポートが呼び出し元へ返らなかった（アイドル通知のみ届く状態）。
+そのため `developing-review` スキルのフォールバック手順に従い、まず 5 視点を逐次レビューして本レポートを作成した。
+
+その後 **`xp-user-representative` からレポートが届き、逐次レビューでは検出できなかった重大な問題（#0）を含んでいた**。同エージェントの指摘は本レポートに統合し、**すべて再検証したうえで** 採否を記載した。誤りだった指摘も記録に残す。
 
 本レポートの指摘は **すべて実際にファイルを読み、コマンドを実行して確認した事実** に基づく。推測による指摘は含めていない。検証に使ったコマンドは各指摘に付記した。
 
@@ -18,15 +20,41 @@
 
 記事・実装・ノートブックの三者がコードを複製せず結び付いており、記載された数値がすべて実測値であるという教材としての誠実さは高い水準にある。3 言語で同じアルゴリズムを実装し、言語機能とアルゴリズム構造の噛み合いを比較する構成も一貫している。
 
-一方で、**公開後に読者が最初に触れる導線に実害のある不具合が 1 件ある**（ノートブックから記事へのリンクがサイト上で 404）。また、章ごとの記事に載せたテスト実行結果が執筆時点のスナップショットのままで、読者が再現できない状態になっている。いずれもマージ前に対応する価値がある。
+一方で、**新規に clone した読者が Kotlin 版をビルドできない**という致命的な問題があった（#0、修正済み）。加えて公開後の導線に実害のある不具合が 1 件（#1、ノートブックから記事へのリンクがサイト上で 404）、章ごとのテスト実行結果が再現できない問題（#2）がある。
+
+指摘 #0 は逐次レビューでは検出できなかった。**レビュー担当（私）が常に Nix devShell（JDK 21）でビルドしており、システム既定の JDK 25 で試していなかった**ためである。環境を固定して作業していると、その環境ごと見落とす。
 
 ## 改善提案（重要度順）
 
 ### 高（マージ前に対応すべき）
 
-| # | 提案 | 箇所 | 指摘元 | 理由 |
-|---|------|------|--------|------|
-| 1 | ノートブックから記事へのリンクを、同期後の階層で解決できる相対パスに直す | 全 33 ノートブックの先頭マークダウンセル（例: `apps/grokking-ml-python/notebooks/ch03.ipynb:12`） | technical-writer / user-representative | リンクは `../../../docs/article/.../ch03.md`。`apps/` 配下では正しく解決するが、`gulp notebooks:sync` で `docs/article/grokking-machine-learning/python/notebooks/` へ複製されると `docs/article/docs/article/...` を指し **公開サイト上で 404 になる**。ビルド済み HTML でも `href="../../../docs/article/grokking-machine-learning/python/ch03.md"` のまま出力されていることを確認済み |
+| # | 提案 | 箇所 | 指摘元 | 状態 | 理由 |
+|---|------|------|--------|------|------|
+| 0 | Kotlin プラグインを JDK 25 に対応した版へ上げる | `apps/grokking-ml-kotlin/build.gradle.kts:2`、`ops/nix/environments/kotlin/shell.nix:8` | user-representative | **修正済み** | Kotlin 2.0.21 に同梱の `JavaVersion.parse` が JDK 25 のバージョン文字列 `25.0.2` を解釈できず、`./gradlew clean test` が `Internal compiler error` で失敗する。**新規 clone した読者は第 3 章の入口で止まる**。既存のビルド成果物があると `./gradlew test` は `UP-TO-DATE` で成功して見えるため、手元では気づけない |
+
+**#0 の検証と修正**:
+
+```bash
+java -version                        # → openjdk 25.0.2（システム既定）
+./gradlew clean test --no-daemon     # → BUILD FAILED: Internal compiler error
+./gradlew clean compileKotlin --stacktrace | grep JavaVersion
+# → java.lang.IllegalArgumentException: 25.0.2
+#      at org.jetbrains.kotlin.com.intellij.util.lang.JavaVersion.parse
+```
+
+`build.gradle.kts` の Kotlin プラグインを `2.0.21` → `2.2.20` に上げて解消した。検証結果は次のとおり。
+
+| 環境 | 結果 |
+| :--- | :--- |
+| システム JDK 25.0.2 | `clean test` 成功、178 tests |
+| Nix devShell（JDK 21.0.8） | `clean test` 成功 |
+| Kotlin ノートブック ch03 | 再実行して**出力が完全に一致**（コンパイラ更新の影響なし） |
+
+あわせて `shell.nix` の `jdk`（バージョン未固定）を `jdk21` に変更した。記事が「JVM 21」を前提にしているのに実体が無印だったため、nixpkgs の更新で同じ障害を踏む余地があった。
+
+| # | 提案 | 箇所 | 指摘元 | 状態 | 理由 |
+|---|------|------|--------|------|------|
+| 1 | ノートブックから記事へのリンクを、同期後の階層で解決できる相対パスに直す | 全 33 ノートブックの先頭マークダウンセル（例: `apps/grokking-ml-python/notebooks/ch03.ipynb:12`） | technical-writer | 未対応 | リンクは `../../../docs/article/.../ch03.md`。`apps/` 配下では正しく解決するが、`gulp notebooks:sync` で `docs/article/grokking-machine-learning/python/notebooks/` へ複製されると `docs/article/docs/article/...` を指し **公開サイト上で 404 になる**。ビルド済み HTML でも `href="../../../docs/article/grokking-machine-learning/python/ch03.md"` のまま出力されていることを確認済み |
 
 **検証コマンド**:
 
@@ -79,6 +107,30 @@ uv run pytest tests/test_ch03_linear_regression.py
 | 5 | ノートブック冒頭のリンク文言を整える | 全 33 ノートブックの先頭セル | technical-writer | 「第 3 章 線形回帰（Jupyter Notebook（Python） の言語版）」は括弧が二重で、リンク先が記事なのに「の言語版」という語が実態と合っていない。「第 3 章 線形回帰（Python 版の記事）」で足りる |
 | 6 | Markdown Lint の対象を段階的に広げる計画を残す | `.markdownlint-cli2.jsonc:17` | architect | 本シリーズ 52 ファイルのみを対象にした判断は妥当だが、既存文書 2200 件超の違反は放置されたまま。設定にコメントは残してあるので、あとは実行計画（どの単位で直すか）を決めれば負債の可視化として十分 |
 | 7 | ch03 の Python テストだけ粒度が粗い | `apps/grokking-ml-python/tests/test_ch03_linear_regression.py:57`（`test_rmse`） | tester | Kotlin/F# は「誤差ゼロのとき 0」「二乗平均平方根を返す」の 2 件に分けているが、Python は 1 件にまとめている。失敗時にどちらの性質が壊れたか分かりにくい。ch03 の 7 対 8 という差はこれが理由で、カバレッジ自体の欠落ではない |
+
+## 追加で対応した指摘（user-representative より）
+
+| # | 指摘 | 箇所 | 状態 | 対応内容 |
+|---|------|------|------|----------|
+| 8 | 言語別索引に第 1・2 章への導線がない | `{python,kotlin,fsharp}/index.md` の目次 | **修正済み** | 3 ファイルとも目次が第 3 章から始まっていた（grep で 0 件を確認）。索引から言語版に入った読者がシリーズの導入を読まずに実装へ進んでしまう。目次の先頭に第 1・2 章（3 言語共通）の行を追加した |
+| 9 | 「Gradle Wrapper を使うため同じ結果になる」という記述が誤解を招く | `kotlin/index.md:23` | **修正済み** | Gradle は固定できるが **JDK は固定できない**。実際に壊れるのがその JDK だった（#0）。「JDK 21 以上が必要」「Internal compiler error で止まる」ことを明記し、確認コマンドを添えた |
+
+## 検証の結果、採用しなかった指摘
+
+レビューでは誤った指摘も出る。再検証した結果、事実と異なっていたものを記録する。
+
+| 指摘 | 検証結果 |
+| :--- | :--- |
+| 「`apps/grokking-ml-fsharp/src/GrokkingMl/bin/` と `obj/` がリポジトリに入っている。Kotlin 側には `.gitignore` があるのに F# 側にはない」 | **誤り**。`git ls-files apps/grokking-ml-fsharp \| grep -E "/(bin\|obj)/"` は 0 件。`apps/grokking-ml-fsharp/.gitignore` も存在し `bin/` `obj/` を除外している。作業ディレクトリに未追跡のビルド成果物があるのを見て、追跡されていると誤認したと思われる |
+
+## 未対応として残す指摘
+
+| # | 指摘 | 判断 |
+|---|------|------|
+| 10 | `apps/` 配下に README がない（GitHub から直接訪れた人が辿れない） | **妥当な指摘**。ただし対象が記事シリーズ外（リポジトリ全体の導線）なので、別途対応する |
+| 11 | 最終章に「実務では scikit-learn の何を呼ぶのか」への橋渡しがない | **妥当な指摘**。`fit()` が分からないから始めた読者に最後に `fit()` を返す節は、教材の締めとして価値がある。加筆の分量が大きいため別途対応する |
+| 12 | 索引の「全 13 章を通して見えたこと」が下部にあり、シリーズ固有の面白さが埋もれている | **妥当な指摘**。構成の変更を伴うため別途対応する |
+| 13 | 前提知識（微積分・線形代数が不要であること）を索引に明記すると着手のハードルが下がる | **妥当な指摘**。売りになる情報なので次の改稿で加える |
 
 ## 矛盾事項
 
@@ -188,11 +240,14 @@ print(model.slope, model.intercept, model_rmse(model, features, labels))"
 
 | # | 重要度 | 対応方針 |
 |---|--------|----------|
+| 0 | 高 | **対応済み** — Kotlin 2.2.20 へ更新、`jdk21` へ固定。JDK 21 / 25 両方で検証 |
+| 8・9 | 中 | **対応済み** — 第 1・2 章への導線を追加、JDK 要件を明記 |
 | 1 | 高 | **要判断** — マージ前に修正するか、別 PR に切り出すか |
 | 2 | 中 | 要判断 |
 | 3 | 中 | 要判断（次のバージョンバンプまでは顕在化しない） |
 | 4 | 中 | 要判断 |
 | 5〜7 | 低 | 保留可 |
+| 10〜13 | 中〜低 | 別途対応（記事シリーズ外、または加筆量が大きいもの） |
 
 ## 参照
 
