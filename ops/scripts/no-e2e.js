@@ -11,7 +11,8 @@
  * E2E ランナー呼び出しに差し替える。
  */
 console.log('E2E テスト: 本リポジトリには E2E 対象（UI・サービス）がないため未定義です。');
-console.log('  検証は次の 3 つが担っています:');
-console.log('    - ユニットテスト（Python 179 / Kotlin 178 / F# 176）');
+console.log('  検証は次の 4 つが担っています:');
+console.log('    - 自前実装版のユニットテスト（Python 179 / Kotlin 178 / F# 176）');
+console.log('    - ライブラリ版のユニットテスト（Python 358 / Kotlin 262 / F# 268）');
 console.log('    - ノートブックの実行済み検証（gulp notebooks:check）');
 console.log('    - ドキュメントサイトのビルド（npm run docs:build）');
