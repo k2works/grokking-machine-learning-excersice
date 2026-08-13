@@ -1,0 +1,94 @@
+name: Grokking ML Samples
+
+on:
+  push:
+    paths:
+      - 'apps/grokking-ml-python/**'
+      - 'apps/grokking-ml-kotlin/**'
+      - 'apps/grokking-ml-fsharp/**'
+      - '.github/workflows/grokking-ml.yml'
+      - 'ops/scripts/notebooks.js'
+  pull_request:
+    paths:
+      - 'apps/grokking-ml-python/**'
+      - 'apps/grokking-ml-kotlin/**'
+      - 'apps/grokking-ml-fsharp/**'
+      - '.github/workflows/grokking-ml.yml'
+      - 'ops/scripts/notebooks.js'
+
+jobs:
+  python:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: apps/grokking-ml-python
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - name: Install dependencies
+        run: uv sync
+
+      - name: Lint
+        run: uv run ruff check .
+
+      - name: Test
+        run: uv run pytest
+
+  kotlin:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: apps/grokking-ml-kotlin
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: Test
+        run: ./gradlew test
+
+  fsharp:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: apps/grokking-ml-fsharp
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Test
+        run: dotnet test
+
+  notebooks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: latest
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      # ノートブックは出力込みで commit する。未実行のまま入り込むのを防ぐ
+      - name: Check notebooks are executed
+        run: npm run notebooks:check

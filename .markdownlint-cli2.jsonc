@@ -1,0 +1,20 @@
+{
+  // 日本語の記事は 1 文を 1 行で書く方針のため、行長の制限は外す。
+  // それ以外の構造的なルール（見出し・空行・リスト）は有効のままにして、
+  // 記事の書式の揺れを検出できるようにする。
+  "config": {
+    "MD013": false, // line-length
+    "MD033": false, // inline HTML（<details> を使う）
+    "MD024": { "siblings_only": true }, // 同名見出しは階層が違えば許可
+    "MD029": false, // 順序付きリストの採番スタイル
+    "MD041": false // 先頭が H1 でないファイル（テンプレート断片）を許可
+  },
+
+  // 対象は本リポジトリで執筆した記事に限定する。
+  // booster 由来のテンプレート文書（docs/reference・docs/template・他シリーズ）は
+  // 2000 件超の既存違反を抱えており、本シリーズのリリース品質ゲートで
+  // それらを落とすと無関係な一括修正を強いることになるため、いまは対象外とする。
+  // 既存文書を整えたら globs を docs/**/*.md に広げる。
+  "globs": ["docs/article/grokking-machine-learning/**/*.md"],
+  "ignores": ["node_modules/**", "site/**"]
+}
