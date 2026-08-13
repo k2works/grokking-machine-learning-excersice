@@ -54,7 +54,15 @@ def test_kerasで小さなネットワークが学習できる() -> None:
 
 
 def test_xgboostが学習できる() -> None:
-    from xgboost import XGBClassifier
+    import pytest
+
+    try:
+        from xgboost import XGBClassifier
+    except Exception as error:  # noqa: BLE001
+        # XGBoost の wheel が同梱する libxgboost は libomp を動的に要求する。
+        # devShell の外で走らせるとここで落ちるので、原因が分かる形で飛ばす。
+        # CI は libomp-dev を入れているため、そちらでは必ず実行される。
+        pytest.skip(f"libomp が見つかりません。nix develop .#python-ml で実行してください: {error}")
 
     x = np.array([[0.0, 0.0], [1.0, 1.0], [0.0, 1.0], [1.0, 0.0]])
     y = np.array([0, 1, 0, 1])

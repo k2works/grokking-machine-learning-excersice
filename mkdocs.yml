@@ -165,9 +165,15 @@ nav:
               - 第 13 章 エンドツーエンドの実例: grokking-machine-learning/fsharp/notebooks/ch13.ipynb
       - ライブラリ版:
           - 概要: grokking-machine-learning/lib/index.md
-          - Python 版: grokking-machine-learning/lib/python/index.md
-          - Kotlin 版: grokking-machine-learning/lib/kotlin/index.md
-          - F# 版: grokking-machine-learning/lib/fsharp/index.md
+          - Python 版:
+              - 目次: grokking-machine-learning/lib/python/index.md
+              - '#01 線形回帰を 3 つのトリックで学習する': grokking-machine-learning/lib/python/nb01.md
+          - Kotlin 版:
+              - 目次: grokking-machine-learning/lib/kotlin/index.md
+              - '#01 線形回帰を 3 つのトリックで学習する': grokking-machine-learning/lib/kotlin/nb01.md
+          - F# 版:
+              - 目次: grokking-machine-learning/lib/fsharp/index.md
+              - '#01 線形回帰を 3 つのトリックで学習する': grokking-machine-learning/lib/fsharp/nb01.md
   - 他のシリーズ:
       - テスト駆動開発から始めるプログラミング入門: getting-start-tdd/index.md
       - Grokking Functional Programming: grokkingfp/index.md
