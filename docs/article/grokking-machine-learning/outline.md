@@ -174,7 +174,7 @@ CI では `libomp-dev` を入れて解決しています。
 | スモークテスト | 各言語で主要ライブラリが学習まで走ることを検証（Python 5・Kotlin 6・F# 6） | 完了 |
 | 記事ディレクトリ | `docs/article/grokking-machine-learning/lib/{python,kotlin,fsharp}/` | 完了 |
 | CI | `.github/workflows/grokking-ml-lib.yml`（3 言語、Kotlin は JDK 21 / 25） | 完了 |
-| 22 本の執筆 | 3 言語 × 22 本 | #01〜#13 完了（残り 9 本） |
+| 22 本の執筆 | 3 言語 × 22 本 | #01〜#14 完了（残り 8 本） |
 | ノートブック | Jupyter / Kotlin Notebook / Polyglot Notebook | 未着手 |
 
 ### ノートブック別執筆計画
@@ -196,7 +196,7 @@ CI では `libomp-dev` を入れて解決しています。
 | 11 | 09 | `University_Admissions` | 3 つの制限と過学習（執筆済み） | 深さの対応則が通じない（執筆済み） | 自前 CART が 197 節まで完全一致（執筆済み） |
 | 12 | 09 | `Regression_decision_tree` | 手計算の 9 通りの MSE（執筆済み） | 分類木と別パッケージ・完全一致（執筆済み） | `Leaf` の型差し替えだけ（執筆済み） |
 | 13 | 10 | `Graphical_example`（NN） | パラメータ数 8770 が一致（執筆済み） | Adam が無く 20 倍のエポックが要る（執筆済み） | 重みの初期化が手動（執筆済み） |
-| 14 | 10 | `House_price_predictions_neural_network` | Keras の回帰出力層 | Smile MLP の回帰版 | Accord の出力層設計 |
+| 14 | 10 | `House_price_predictions_neural_network` | パラメータ数 14795 が一致（執筆済み） | 標準化しないと 10^29 に発散（執筆済み） | 出力がシグモイドのみで 2 段の写像（執筆済み） |
 | 15 | 10 | `Image_recognition` | Keras 同梱の MNIST ローダ | MNIST の取得方法（同梱ローダが無い） | 同左 |
 | 16 | 10 | `Plotting_Boundaries` | matplotlib のみで完結する章 | Kandy への読み替え | Plotly.NET への読み替え |
 | 17 | 11 | `Building_the_datasets` | `make_circles` などの生成器 | 生成器が無いので自前で書く範囲 | 同左 |
