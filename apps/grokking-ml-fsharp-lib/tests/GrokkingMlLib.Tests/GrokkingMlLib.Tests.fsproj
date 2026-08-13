@@ -30,6 +30,7 @@
     <Compile Include="Nb17BuildingDatasetsTests.fs" />
     <Compile Include="Nb18CalculatingSimilaritiesTests.fs" />
     <Compile Include="Nb19SvmKernelsTests.fs" />
+    <Compile Include="Nb20EnsembleSpamTests.fs" />
   </ItemGroup>
 
   <ItemGroup>

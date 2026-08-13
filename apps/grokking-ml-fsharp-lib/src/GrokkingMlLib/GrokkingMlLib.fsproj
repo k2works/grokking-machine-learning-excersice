@@ -30,6 +30,7 @@
     <Compile Include="Nb17BuildingDatasets.fs" />
     <Compile Include="Nb18CalculatingSimilarities.fs" />
     <Compile Include="Nb19SvmKernels.fs" />
+    <Compile Include="Nb20EnsembleSpam.fs" />
   </ItemGroup>
 
   <ItemGroup>
