@@ -21,6 +21,7 @@
     <Compile Include="Nb08GiniEntropy.fs" />
     <Compile Include="Nb09AppRecommendations.fs" />
     <Compile Include="Nb10DecisionTreeBoundary.fs" />
+    <Compile Include="Nb11UniversityAdmissions.fs" />
   </ItemGroup>
 
   <ItemGroup>
