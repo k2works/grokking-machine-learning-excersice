@@ -18,6 +18,7 @@
     <Compile Include="Nb05LogisticRegression.fs" />
     <Compile Include="Nb06SentimentImdb.fs" />
     <Compile Include="Nb07NaiveBayes.fs" />
+    <Compile Include="Nb08GiniEntropy.fs" />
   </ItemGroup>
 
   <ItemGroup>

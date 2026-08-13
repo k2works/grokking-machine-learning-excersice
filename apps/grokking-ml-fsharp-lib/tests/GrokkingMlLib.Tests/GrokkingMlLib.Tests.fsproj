@@ -18,6 +18,7 @@
     <Compile Include="Nb05LogisticRegressionTests.fs" />
     <Compile Include="Nb06SentimentImdbTests.fs" />
     <Compile Include="Nb07NaiveBayesTests.fs" />
+    <Compile Include="Nb08GiniEntropyTests.fs" />
   </ItemGroup>
 
   <ItemGroup>

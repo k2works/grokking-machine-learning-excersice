@@ -174,6 +174,7 @@ nav:
               - '#05 ロジスティック回帰の学習': grokking-machine-learning/lib/python/nb05.md
               - '#06 IMDB レビューの感情分析': grokking-machine-learning/lib/python/nb06.md
               - '#07 ナイーブベイズでスパム判定': grokking-machine-learning/lib/python/nb07.md
+              - '#08 ジニ不純度とエントロピーの計算': grokking-machine-learning/lib/python/nb08.md
           - Kotlin 版:
               - 目次: grokking-machine-learning/lib/kotlin/index.md
               - '#01 線形回帰を 3 つのトリックで学習する': grokking-machine-learning/lib/kotlin/nb01.md
@@ -183,6 +184,7 @@ nav:
               - '#05 ロジスティック回帰の学習': grokking-machine-learning/lib/kotlin/nb05.md
               - '#06 IMDB レビューの感情分析': grokking-machine-learning/lib/kotlin/nb06.md
               - '#07 ナイーブベイズでスパム判定': grokking-machine-learning/lib/kotlin/nb07.md
+              - '#08 ジニ不純度とエントロピーの計算': grokking-machine-learning/lib/kotlin/nb08.md
           - F# 版:
               - 目次: grokking-machine-learning/lib/fsharp/index.md
               - '#01 線形回帰を 3 つのトリックで学習する': grokking-machine-learning/lib/fsharp/nb01.md
@@ -192,6 +194,7 @@ nav:
               - '#05 ロジスティック回帰の学習': grokking-machine-learning/lib/fsharp/nb05.md
               - '#06 IMDB レビューの感情分析': grokking-machine-learning/lib/fsharp/nb06.md
               - '#07 ナイーブベイズでスパム判定': grokking-machine-learning/lib/fsharp/nb07.md
+              - '#08 ジニ不純度とエントロピーの計算': grokking-machine-learning/lib/fsharp/nb08.md
   - 他のシリーズ:
       - テスト駆動開発から始めるプログラミング入門: getting-start-tdd/index.md
       - Grokking Functional Programming: grokkingfp/index.md
