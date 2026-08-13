@@ -27,6 +27,7 @@
     <Compile Include="Nb14HousePriceNetwork.fs" />
     <Compile Include="Nb15ImageRecognition.fs" />
     <Compile Include="Nb16PlottingBoundaries.fs" />
+    <Compile Include="Nb17BuildingDatasets.fs" />
   </ItemGroup>
 
   <ItemGroup>
