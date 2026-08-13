@@ -17,6 +17,7 @@
     <Compile Include="Nb04Perceptron.fs" />
     <Compile Include="Nb05LogisticRegression.fs" />
     <Compile Include="Nb06SentimentImdb.fs" />
+    <Compile Include="Nb07NaiveBayes.fs" />
   </ItemGroup>
 
   <ItemGroup>
