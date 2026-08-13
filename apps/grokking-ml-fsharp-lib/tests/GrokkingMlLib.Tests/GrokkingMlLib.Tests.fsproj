@@ -28,6 +28,7 @@
     <Compile Include="Nb15ImageRecognitionTests.fs" />
     <Compile Include="Nb16PlottingBoundariesTests.fs" />
     <Compile Include="Nb17BuildingDatasetsTests.fs" />
+    <Compile Include="Nb18CalculatingSimilaritiesTests.fs" />
   </ItemGroup>
 
   <ItemGroup>
