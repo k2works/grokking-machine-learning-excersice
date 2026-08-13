@@ -188,6 +188,7 @@ nav:
               - '#19 カーネルとハイパーパラメータを比べる': grokking-machine-learning/lib/python/nb19.md
               - '#20 ランダムフォレストと AdaBoost': grokking-machine-learning/lib/python/nb20.md
               - '#21 勾配ブースティングと XGBoost': grokking-machine-learning/lib/python/nb21.md
+              - '#22 タイタニックで通しの機械学習': grokking-machine-learning/lib/python/nb22.md
           - Kotlin 版:
               - 目次: grokking-machine-learning/lib/kotlin/index.md
               - '#01 線形回帰を 3 つのトリックで学習する': grokking-machine-learning/lib/kotlin/nb01.md
@@ -211,6 +212,7 @@ nav:
               - '#19 カーネルとハイパーパラメータを比べる': grokking-machine-learning/lib/kotlin/nb19.md
               - '#20 ランダムフォレストと AdaBoost': grokking-machine-learning/lib/kotlin/nb20.md
               - '#21 勾配ブースティングと XGBoost': grokking-machine-learning/lib/kotlin/nb21.md
+              - '#22 タイタニックで通しの機械学習': grokking-machine-learning/lib/kotlin/nb22.md
           - F# 版:
               - 目次: grokking-machine-learning/lib/fsharp/index.md
               - '#01 線形回帰を 3 つのトリックで学習する': grokking-machine-learning/lib/fsharp/nb01.md
@@ -234,6 +236,7 @@ nav:
               - '#19 カーネルとハイパーパラメータを比べる': grokking-machine-learning/lib/fsharp/nb19.md
               - '#20 ランダムフォレストと AdaBoost': grokking-machine-learning/lib/fsharp/nb20.md
               - '#21 勾配ブースティングと XGBoost': grokking-machine-learning/lib/fsharp/nb21.md
+              - '#22 タイタニックで通しの機械学習': grokking-machine-learning/lib/fsharp/nb22.md
   - 他のシリーズ:
       - テスト駆動開発から始めるプログラミング入門: getting-start-tdd/index.md
       - Grokking Functional Programming: grokkingfp/index.md
