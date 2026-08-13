@@ -25,6 +25,7 @@
     <Compile Include="Nb12RegressionTree.fs" />
     <Compile Include="Nb13NeuralNetworkBoundary.fs" />
     <Compile Include="Nb14HousePriceNetwork.fs" />
+    <Compile Include="Nb15ImageRecognition.fs" />
   </ItemGroup>
 
   <ItemGroup>

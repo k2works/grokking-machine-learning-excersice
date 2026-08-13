@@ -1,3 +1,4 @@
 # 大きいので Git には含めず、データローダが初回に取得する
 emails.csv
 IMDB_Dataset.csv
+mnist.npz

@@ -25,6 +25,9 @@ _REMOTE_FILES: dict[str, str] = {
         "https://raw.githubusercontent.com/luisguiserrano/manning/master/"
         "Chapter_06_Logistic_Regression/IMDB_Dataset.csv"
     ),
+    # Keras が `keras.datasets.mnist.load_data()` で取りにいくのと同じファイル。
+    # 3 言語で同じ画像を使うために共有する
+    "mnist.npz": "https://storage.googleapis.com/tensorflow/tf-keras-datasets/mnist.npz",
 }
 
 

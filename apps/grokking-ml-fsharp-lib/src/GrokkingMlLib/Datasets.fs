@@ -19,6 +19,8 @@ let private remoteFiles =
         "https://raw.githubusercontent.com/luisguiserrano/manning/master/Chapter_08_Naive_Bayes/emails.csv"
         "IMDB_Dataset.csv",
         "https://raw.githubusercontent.com/luisguiserrano/manning/master/Chapter_06_Logistic_Regression/IMDB_Dataset.csv"
+        // Keras が `keras.datasets.mnist.load_data()` で取りにいくのと同じファイル
+        "mnist.npz", "https://storage.googleapis.com/tensorflow/tf-keras-datasets/mnist.npz"
     ]
 
 /// 実行ディレクトリから親へ辿って `grokking-ml-datasets` を探す。

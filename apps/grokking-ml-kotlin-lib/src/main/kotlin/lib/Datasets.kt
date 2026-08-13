@@ -23,6 +23,8 @@ object Datasets {
         "IMDB_Dataset.csv" to
             "https://raw.githubusercontent.com/luisguiserrano/manning/master/" +
             "Chapter_06_Logistic_Regression/IMDB_Dataset.csv",
+        // Keras が `keras.datasets.mnist.load_data()` で取りにいくのと同じファイル
+        "mnist.npz" to "https://storage.googleapis.com/tensorflow/tf-keras-datasets/mnist.npz",
     )
 
     /** 共有データセットディレクトリを返す */
