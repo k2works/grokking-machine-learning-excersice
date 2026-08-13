@@ -31,6 +31,7 @@
     <Compile Include="Nb18CalculatingSimilarities.fs" />
     <Compile Include="Nb19SvmKernels.fs" />
     <Compile Include="Nb20EnsembleSpam.fs" />
+    <Compile Include="Nb21GradientBoosting.fs" />
   </ItemGroup>
 
   <ItemGroup>

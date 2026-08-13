@@ -31,6 +31,7 @@
     <Compile Include="Nb18CalculatingSimilaritiesTests.fs" />
     <Compile Include="Nb19SvmKernelsTests.fs" />
     <Compile Include="Nb20EnsembleSpamTests.fs" />
+    <Compile Include="Nb21GradientBoostingTests.fs" />
   </ItemGroup>
 
   <ItemGroup>

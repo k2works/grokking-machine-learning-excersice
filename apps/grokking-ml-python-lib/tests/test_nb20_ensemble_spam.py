@@ -142,7 +142,7 @@ def _xgboost_available() -> bool:
     # macOS では libomp が要る。Nix の python-ml シェルの外では読み込めない
     try:
         import xgboost  # noqa: F401
-    except Exception:
+    except Exception:  # noqa: BLE001 - 読み込み失敗の理由は問わない
         return False
     return True
 
