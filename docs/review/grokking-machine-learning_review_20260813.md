@@ -108,6 +108,18 @@ uv run pytest tests/test_ch03_linear_regression.py
 | 6 | Markdown Lint の対象を段階的に広げる計画を残す | `.markdownlint-cli2.jsonc:17` | architect | 本シリーズ 52 ファイルのみを対象にした判断は妥当だが、既存文書 2200 件超の違反は放置されたまま。設定にコメントは残してあるので、あとは実行計画（どの単位で直すか）を決めれば負債の可視化として十分 |
 | 7 | ch03 の Python テストだけ粒度が粗い | `apps/grokking-ml-python/tests/test_ch03_linear_regression.py:57`（`test_rmse`） | tester | Kotlin/F# は「誤差ゼロのとき 0」「二乗平均平方根を返す」の 2 件に分けているが、Python は 1 件にまとめている。失敗時にどちらの性質が壊れたか分かりにくい。ch03 の 7 対 8 という差はこれが理由で、カバレッジ自体の欠落ではない |
 
+## レビューから派生した再発防止
+
+指摘 #0 を検出できなかった原因は実装ではなく **検証の網** にあった。
+
+| 検証経路 | 当時の状態 | なぜ通ってしまったか |
+| :--- | :--- | :--- |
+| ローカル（レビュー担当） | Nix devShell 固定 | 常に JDK 21。システム既定の JDK 25 を試していない |
+| CI | `java-version: '21'` 固定 | JDK 21 しか検証していない（`.github/workflows/grokking-ml.yml`） |
+| CI のコマンド | `./gradlew test` | キャッシュされた成果物があると `UP-TO-DATE` でコンパイルが走らない |
+
+**対応（実施済み）**: CI の Kotlin ジョブに JDK 21 / 25 のマトリクスを追加し、コマンドを `./gradlew clean test` に変更した。同じ問題が起きれば CI が落ちる。
+
 ## 追加で対応した指摘（user-representative より）
 
 | # | 指摘 | 箇所 | 状態 | 対応内容 |

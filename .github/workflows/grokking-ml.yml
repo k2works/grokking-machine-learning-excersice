@@ -41,23 +41,32 @@ jobs:
 
   kotlin:
     runs-on: ubuntu-latest
+    # JDK を 1 つだけ固定していると、読者の環境（新しい JDK）で
+    # Kotlin コンパイラが落ちる問題を CI が素通りさせてしまう。
+    # 実際に Kotlin 2.0.21 が JDK 25 でビルドできない問題を CI が検出できなかった。
+    strategy:
+      fail-fast: false
+      matrix:
+        java: ['21', '25']
     defaults:
       run:
         working-directory: apps/grokking-ml-kotlin
     steps:
       - uses: actions/checkout@v4
 
-      - name: Set up JDK 21
+      - name: Set up JDK ${{ matrix.java }}
         uses: actions/setup-java@v4
         with:
           distribution: temurin
-          java-version: '21'
+          java-version: ${{ matrix.java }}
 
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v4
 
+      # clean を付けないと、キャッシュされた成果物で UP-TO-DATE になり
+      # コンパイル自体が走らないことがある
       - name: Test
-        run: ./gradlew test
+        run: ./gradlew clean test
 
   fsharp:
     runs-on: ubuntu-latest
