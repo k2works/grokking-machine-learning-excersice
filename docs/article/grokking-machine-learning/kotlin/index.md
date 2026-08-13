@@ -1,6 +1,6 @@
 # Grokking Machine Learning - Kotlin 版
 
-Kotlin 2.0（JVM 21）を使い、機械学習アルゴリズムを **標準ライブラリのみ** で実装します。KotlinDL や Smile といった ML ライブラリは使いません。
+Kotlin 2.2（JVM 21）を使い、機械学習アルゴリズムを **標準ライブラリのみ** で実装します。KotlinDL や Smile といった ML ライブラリは使いません。
 
 `data class` による不変なモデル表現と、拡張関数・高階関数によるアルゴリズムの組み立てが Kotlin 版の焦点です。
 
@@ -8,7 +8,7 @@ Kotlin 2.0（JVM 21）を使い、機械学習アルゴリズムを **標準ラ�
 
 | 項目 | 内容 |
 | :--- | :--- |
-| 言語 | Kotlin 2.0（JVM ターゲット 21） |
+| 言語 | Kotlin 2.2（JVM ターゲット 21） |
 | ビルド | Gradle（Kotlin DSL） |
 | テスト | kotlin.test（JUnit 5 プラットフォーム） |
 | 実行環境 | Nix devShell `kotlin` |
@@ -20,7 +20,13 @@ Kotlin 2.0（JVM 21）を使い、機械学習アルゴリズムを **標準ラ�
 nix develop .#kotlin
 ```
 
-Nix の `kotlin` devShell が JDK 21・Kotlin コンパイラ・Gradle を提供します。ビルドには Gradle Wrapper（`./gradlew`）を使うため、devShell の Gradle バージョンに関係なく同じ結果になります。
+Nix の `kotlin` devShell が JDK 21・Kotlin コンパイラ・Gradle を提供します。ビルドには Gradle Wrapper（`./gradlew`）を使うため、Gradle のバージョンは固定されます。
+
+**JDK は Gradle Wrapper では固定できません。** Nix を使わない場合は、JDK 21 以上を用意してください。Kotlin プラグインが新しい JDK のバージョン文字列を解釈できないと、`Internal compiler error` という原因の分かりにくいエラーで止まります（本シリーズは JDK 21 と 25 で動作を確認しています）。
+
+```bash
+java -version   # 21 以上であること
+```
 
 ### テストの実行
 
@@ -33,6 +39,8 @@ cd apps/grokking-ml-kotlin
 
 | 章 | タイトル |
 | :--- | :--- |
+| 01 | [機械学習とは何か](../all/ch01-what-is-machine-learning.md)（3 言語共通） |
+| 02 | [機械学習の種類](../all/ch02-types-of-machine-learning.md)（3 言語共通） |
 | 03 | [線形回帰](ch03.md) |
 | 04 | [過学習・未学習と正則化](ch04.md) |
 | 05 | [パーセプトロン](ch05.md) |

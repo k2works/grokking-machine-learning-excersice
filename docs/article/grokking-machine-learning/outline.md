@@ -14,7 +14,7 @@
 | 言語 | バージョン | 実行環境 | ビルド/テスト | サンプル実装 |
 | :--- | :--- | :--- | :--- | :--- |
 | Python | 3.11+ | Nix devShell `python` | uv + pytest + ruff | `apps/grokking-ml-python` |
-| Kotlin | 2.0 (JVM 21) | Nix devShell `kotlin` | Gradle Wrapper + kotlin.test | `apps/grokking-ml-kotlin` |
+| Kotlin | 2.2 (JVM 21) | Nix devShell `kotlin` | Gradle Wrapper + kotlin.test | `apps/grokking-ml-kotlin` |
 | F# | .NET 10 | Nix devShell `dotnet` | dotnet + xUnit | `apps/grokking-ml-fsharp` |
 
 ## 章構成

@@ -33,6 +33,8 @@ uv run ruff check .
 
 | 章 | タイトル |
 | :--- | :--- |
+| 01 | [機械学習とは何か](../all/ch01-what-is-machine-learning.md)（3 言語共通） |
+| 02 | [機械学習の種類](../all/ch02-types-of-machine-learning.md)（3 言語共通） |
 | 03 | [線形回帰](ch03.md) |
 | 04 | [過学習・未学習と正則化](ch04.md) |
 | 05 | [パーセプトロン](ch05.md) |

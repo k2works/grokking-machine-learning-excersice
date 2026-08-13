@@ -1,8 +1,9 @@
-site_name: Site Name
-site_description: Site Description
-site_author: Project Team
-repo_url: https://github.com/k2works/claude-code-booster
-repo_name: claude-code-booster
+site_name: Grokking Machine Learning 学習リポジトリ
+site_description: 機械学習アルゴリズムを Python・Kotlin・F# の 3 言語で自前実装しながら学ぶ記事シリーズ
+site_author: k2works
+site_url: https://k2works.github.io/grokking-machine-learning-excersice/
+repo_url: https://github.com/k2works/grokking-machine-learning-excersice
+repo_name: k2works/grokking-machine-learning-excersice
 
 theme:
   name: material
