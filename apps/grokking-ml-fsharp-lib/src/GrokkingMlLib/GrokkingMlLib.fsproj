@@ -12,6 +12,7 @@
     <PackageReference Include="FSharp.Core" Version="10.1.400" />
     <Compile Include="Datasets.fs" />
     <Compile Include="Nb01LinearRegression.fs" />
+    <Compile Include="Nb02HousePrices.fs" />
   </ItemGroup>
 
   <ItemGroup>

@@ -12,6 +12,7 @@
     <PackageReference Include="FSharp.Core" Version="10.1.400" />
     <Compile Include="EnvironmentTests.fs" />
     <Compile Include="Nb01LinearRegressionTests.fs" />
+    <Compile Include="Nb02HousePricesTests.fs" />
   </ItemGroup>
 
   <ItemGroup>
