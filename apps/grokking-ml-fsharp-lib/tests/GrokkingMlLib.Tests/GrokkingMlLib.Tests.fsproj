@@ -13,6 +13,7 @@
     <Compile Include="EnvironmentTests.fs" />
     <Compile Include="Nb01LinearRegressionTests.fs" />
     <Compile Include="Nb02HousePricesTests.fs" />
+    <Compile Include="Nb03PolynomialRegularizationTests.fs" />
   </ItemGroup>
 
   <ItemGroup>

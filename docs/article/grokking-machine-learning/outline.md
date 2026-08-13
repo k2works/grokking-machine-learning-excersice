@@ -174,7 +174,7 @@ CI では `libomp-dev` を入れて解決しています。
 | スモークテスト | 各言語で主要ライブラリが学習まで走ることを検証（Python 5・Kotlin 6・F# 6） | 完了 |
 | 記事ディレクトリ | `docs/article/grokking-machine-learning/lib/{python,kotlin,fsharp}/` | 完了 |
 | CI | `.github/workflows/grokking-ml-lib.yml`（3 言語、Kotlin は JDK 21 / 25） | 完了 |
-| 22 本の執筆 | 3 言語 × 22 本 | #01・#02 完了（残り 20 本） |
+| 22 本の執筆 | 3 言語 × 22 本 | #01〜#03 完了（残り 19 本） |
 | ノートブック | Jupyter / Kotlin Notebook / Polyglot Notebook | 未着手 |
 
 ### ノートブック別執筆計画
@@ -185,7 +185,7 @@ CI では `libomp-dev` を入れて解決しています。
 | ---: | :--- | :--- | :--- | :--- | :--- |
 | 01 | 03 | `Coding_linear_regression` | `LinearRegression` と手書きトリックの対応（執筆済み） | Smile `OLS` は切片を別メソッドで返す（執筆済み） | `Fit.Line` の構造体タプル（執筆済み） |
 | 02 | 03 | `House_price_predictions` | one-hot でランク落ちする設計行列（執筆済み） | `get_dummies` 相当を自前で書く（執筆済み） | Math.NET SVD の打ち切り閾値問題（執筆済み） |
-| 03 | 04 | `Polynomial_regression_regularization` | `PolynomialFeatures` + `Lasso` / `Ridge` | Smile の正則化パラメータ | ML.NET の L1・L2 オプション |
+| 03 | 04 | `Polynomial_regression_regularization` | 正則化が解を再現可能にする（執筆済み） | Smile の LASSO は厳密なゼロを出さない（執筆済み） | Ridge・Lasso を自前で実装（執筆済み） |
 | 04 | 05 | `Coding_perceptron_algorithm` | `Perceptron` の `max_iter` と収束 | Smile `Perceptron` | ML.NET `AveragedPerceptron` |
 | 05 | 06 | `Coding_logistic_regression` | `LogisticRegression` のソルバ選択 | Smile `LogisticRegression` | `SdcaLogisticRegression` と正規化 |
 | 06 | 06 | `Sentiment_analysis_IMDB` | `CountVectorizer` のスパース行列 | Kotlin での語彙構築（既製の Vectorizer が無い） | ML.NET `FeaturizeText` |

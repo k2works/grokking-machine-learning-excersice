@@ -13,6 +13,7 @@
     <Compile Include="Datasets.fs" />
     <Compile Include="Nb01LinearRegression.fs" />
     <Compile Include="Nb02HousePrices.fs" />
+    <Compile Include="Nb03PolynomialRegularization.fs" />
   </ItemGroup>
 
   <ItemGroup>
