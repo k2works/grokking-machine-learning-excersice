@@ -22,6 +22,7 @@
     <Compile Include="Nb09AppRecommendationsTests.fs" />
     <Compile Include="Nb10DecisionTreeBoundaryTests.fs" />
     <Compile Include="Nb11UniversityAdmissionsTests.fs" />
+    <Compile Include="Nb12RegressionTreeTests.fs" />
   </ItemGroup>
 
   <ItemGroup>

@@ -174,7 +174,7 @@ CI では `libomp-dev` を入れて解決しています。
 | スモークテスト | 各言語で主要ライブラリが学習まで走ることを検証（Python 5・Kotlin 6・F# 6） | 完了 |
 | 記事ディレクトリ | `docs/article/grokking-machine-learning/lib/{python,kotlin,fsharp}/` | 完了 |
 | CI | `.github/workflows/grokking-ml-lib.yml`（3 言語、Kotlin は JDK 21 / 25） | 完了 |
-| 22 本の執筆 | 3 言語 × 22 本 | #01〜#11 完了（残り 11 本） |
+| 22 本の執筆 | 3 言語 × 22 本 | #01〜#12 完了（残り 10 本） |
 | ノートブック | Jupyter / Kotlin Notebook / Polyglot Notebook | 未着手 |
 
 ### ノートブック別執筆計画
@@ -194,7 +194,7 @@ CI では `libomp-dev` を入れて解決しています。
 | 09 | 09 | `App_recommendations` | 同点の分割を無作為に選ぶため木が毎回変わる（執筆済み） | DOT 文字列・多出力なし・決定的（執筆済み） | 木を読み出せず CART を自前実装（執筆済み） |
 | 10 | 09 | `Graphical_example`（決定木） | 境界を格子として取り出しテストする（執筆済み） | 深さの数え方が 1 つずれる（執筆済み） | 判別共用体で指標を差し替える（執筆済み） |
 | 11 | 09 | `University_Admissions` | 3 つの制限と過学習（執筆済み） | 深さの対応則が通じない（執筆済み） | 自前 CART が 197 節まで完全一致（執筆済み） |
-| 12 | 09 | `Regression_decision_tree` | `DecisionTreeRegressor` | Smile `RegressionTree` | ML.NET `FastTreeRegression` |
+| 12 | 09 | `Regression_decision_tree` | 手計算の 9 通りの MSE（執筆済み） | 分類木と別パッケージ・完全一致（執筆済み） | `Leaf` の型差し替えだけ（執筆済み） |
 | 13 | 10 | `Graphical_example`（NN） | Keras `Sequential` の層定義 | Smile `MLP` の `Layer` ビルダー | Accord `ActivationNetwork` |
 | 14 | 10 | `House_price_predictions_neural_network` | Keras の回帰出力層 | Smile MLP の回帰版 | Accord の出力層設計 |
 | 15 | 10 | `Image_recognition` | Keras 同梱の MNIST ローダ | MNIST の取得方法（同梱ローダが無い） | 同左 |

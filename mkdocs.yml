@@ -178,6 +178,7 @@ nav:
               - '#09 アプリ推薦の決定木': grokking-machine-learning/lib/python/nb09.md
               - '#10 決定木の境界を図示する': grokking-machine-learning/lib/python/nb10.md
               - '#11 大学院入学審査の決定木': grokking-machine-learning/lib/python/nb11.md
+              - '#12 回帰木': grokking-machine-learning/lib/python/nb12.md
           - Kotlin 版:
               - 目次: grokking-machine-learning/lib/kotlin/index.md
               - '#01 線形回帰を 3 つのトリックで学習する': grokking-machine-learning/lib/kotlin/nb01.md
@@ -191,6 +192,7 @@ nav:
               - '#09 アプリ推薦の決定木': grokking-machine-learning/lib/kotlin/nb09.md
               - '#10 決定木の境界を図示する': grokking-machine-learning/lib/kotlin/nb10.md
               - '#11 大学院入学審査の決定木': grokking-machine-learning/lib/kotlin/nb11.md
+              - '#12 回帰木': grokking-machine-learning/lib/kotlin/nb12.md
           - F# 版:
               - 目次: grokking-machine-learning/lib/fsharp/index.md
               - '#01 線形回帰を 3 つのトリックで学習する': grokking-machine-learning/lib/fsharp/nb01.md
@@ -204,6 +206,7 @@ nav:
               - '#09 アプリ推薦の決定木': grokking-machine-learning/lib/fsharp/nb09.md
               - '#10 決定木の境界を図示する': grokking-machine-learning/lib/fsharp/nb10.md
               - '#11 大学院入学審査の決定木': grokking-machine-learning/lib/fsharp/nb11.md
+              - '#12 回帰木': grokking-machine-learning/lib/fsharp/nb12.md
   - 他のシリーズ:
       - テスト駆動開発から始めるプログラミング入門: getting-start-tdd/index.md
       - Grokking Functional Programming: grokkingfp/index.md
