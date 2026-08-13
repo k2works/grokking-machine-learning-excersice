@@ -54,7 +54,7 @@ java -version                        # → openjdk 25.0.2（システム既定�
 
 | # | 提案 | 箇所 | 指摘元 | 状態 | 理由 |
 |---|------|------|--------|------|------|
-| 1 | ノートブックから記事へのリンクを、同期後の階層で解決できる相対パスに直す | 全 33 ノートブックの先頭マークダウンセル（例: `apps/grokking-ml-python/notebooks/ch03.ipynb:12`） | technical-writer | 未対応 | リンクは `../../../docs/article/.../ch03.md`。`apps/` 配下では正しく解決するが、`gulp notebooks:sync` で `docs/article/grokking-machine-learning/python/notebooks/` へ複製されると `docs/article/docs/article/...` を指し **公開サイト上で 404 になる**。ビルド済み HTML でも `href="../../../docs/article/grokking-machine-learning/python/ch03.md"` のまま出力されていることを確認済み |
+| 1 | ノートブックから記事へのリンクを、同期後の階層で解決できる形に直す | 全 33 ノートブックの先頭マークダウンセル（例: `apps/grokking-ml-python/notebooks/ch03.ipynb:12`） | technical-writer | **修正済み** | リンクは `../../../docs/article/.../ch03.md`。`apps/` 配下では正しく解決するが、`gulp notebooks:sync` で `docs/article/grokking-machine-learning/python/notebooks/` へ複製されると `docs/article/docs/article/...` を指し **公開サイト上で 404 になる**。ビルド済み HTML でも `href="../../../docs/article/grokking-machine-learning/python/ch03.md"` のまま出力されていることを確認済み |
 
 **検証コマンド**:
 
@@ -71,7 +71,17 @@ grep -o 'href="[^"]*ch03[^"]*"' site/article/grokking-machine-learning/python/no
 | B | GitHub 上の絶対 URL にする | どちらの経路でも解決する。オフラインでは辿れない |
 | C | `notebooks:sync` 時にリンクを書き換える | 両立するが、同期スクリプトに変換処理が増える |
 
-**推奨は B**。教材の読者はオンラインで読む前提が強く、変換処理という新たな仕掛けを増やさずに済む。
+**採用したのは B（GitHub 上の絶対 URL）**。当初は公開サイトの URL も候補だったが、**GitHub Pages が未有効**（`gh-pages` ブランチは存在するがサイトは 404）だったため、確実に解決する GitHub の blob URL にした。
+
+```text
+https://github.com/k2works/grokking-machine-learning-excersice/blob/main/docs/article/grokking-machine-learning/python/ch03.md
+```
+
+変更したのはマークダウンセルのリンク 1 行のみで、コードセルには触れていない。出力と実行状態はそのまま保たれている（`gulp notebooks:check` で 33 本すべて実行済みを確認、3 言語で出力値の残存も確認）。
+
+サイトを再ビルドして、33 ページすべてで絶対 URL が出力され、壊れた相対リンクが 0 件になったことを確認した。
+
+あわせて #5（リンク文言）も同時に直した。「第 3 章 線形回帰（Jupyter Notebook（Python） の言語版）」→「第 3 章 線形回帰（Python 版）」。
 
 ### 中（対応推奨）
 
@@ -104,7 +114,7 @@ uv run pytest tests/test_ch03_linear_regression.py
 
 | # | 提案 | 箇所 | 指摘元 | 理由 |
 |---|------|------|--------|------|
-| 5 | ノートブック冒頭のリンク文言を整える | 全 33 ノートブックの先頭セル | technical-writer | 「第 3 章 線形回帰（Jupyter Notebook（Python） の言語版）」は括弧が二重で、リンク先が記事なのに「の言語版」という語が実態と合っていない。「第 3 章 線形回帰（Python 版の記事）」で足りる |
+| 5 | ノートブック冒頭のリンク文言を整える（**修正済み**） | 全 33 ノートブックの先頭セル | technical-writer | 「第 3 章 線形回帰（Jupyter Notebook（Python） の言語版）」は括弧が二重で、リンク先が記事なのに「の言語版」という語が実態と合っていない。「第 3 章 線形回帰（Python 版の記事）」で足りる |
 | 6 | Markdown Lint の対象を段階的に広げる計画を残す | `.markdownlint-cli2.jsonc:17` | architect | 本シリーズ 52 ファイルのみを対象にした判断は妥当だが、既存文書 2200 件超の違反は放置されたまま。設定にコメントは残してあるので、あとは実行計画（どの単位で直すか）を決めれば負債の可視化として十分 |
 | 7 | ch03 の Python テストだけ粒度が粗い | `apps/grokking-ml-python/tests/test_ch03_linear_regression.py:57`（`test_rmse`） | tester | Kotlin/F# は「誤差ゼロのとき 0」「二乗平均平方根を返す」の 2 件に分けているが、Python は 1 件にまとめている。失敗時にどちらの性質が壊れたか分かりにくい。ch03 の 7 対 8 という差はこれが理由で、カバレッジ自体の欠落ではない |
 
@@ -126,6 +136,16 @@ uv run pytest tests/test_ch03_linear_regression.py
 |---|------|------|------|----------|
 | 8 | 言語別索引に第 1・2 章への導線がない | `{python,kotlin,fsharp}/index.md` の目次 | **修正済み** | 3 ファイルとも目次が第 3 章から始まっていた（grep で 0 件を確認）。索引から言語版に入った読者がシリーズの導入を読まずに実装へ進んでしまう。目次の先頭に第 1・2 章（3 言語共通）の行を追加した |
 | 9 | 「Gradle Wrapper を使うため同じ結果になる」という記述が誤解を招く | `kotlin/index.md:23` | **修正済み** | Gradle は固定できるが **JDK は固定できない**。実際に壊れるのがその JDK だった（#0）。「JDK 21 以上が必要」「Internal compiler error で止まる」ことを明記し、確認コマンドを添えた |
+
+## 修正作業中に見つかった問題
+
+| # | 問題 | 箇所 | 状態 |
+|---|------|------|------|
+| 14 | MkDocs の設定がテンプレートの既定値のままだった | `mkdocs.yml:1-5` | **修正済み** |
+
+`site_name: Site Name`、`repo_url: https://github.com/k2works/claude-code-booster`（**別リポジトリ**）のまま公開されようとしていた。サイトのタイトルとヘッダーのリポジトリリンクが誤りになる。実リポジトリの値に修正し、`site_url` も追加した。
+
+なお **GitHub Pages がまだ有効化されていない**（`gh-pages` ブランチは存在するがサイトは 404）。公開するにはリポジトリ設定での有効化が必要。
 
 ## 検証の結果、採用しなかった指摘
 
@@ -254,11 +274,13 @@ print(model.slope, model.intercept, model_rmse(model, features, labels))"
 |---|--------|----------|
 | 0 | 高 | **対応済み** — Kotlin 2.2.20 へ更新、`jdk21` へ固定。JDK 21 / 25 両方で検証 |
 | 8・9 | 中 | **対応済み** — 第 1・2 章への導線を追加、JDK 要件を明記 |
-| 1 | 高 | **要判断** — マージ前に修正するか、別 PR に切り出すか |
+| 1 | 高 | **対応済み** — GitHub の絶対 URL へ変更、サイト再ビルドで検証 |
 | 2 | 中 | 要判断 |
 | 3 | 中 | 要判断（次のバージョンバンプまでは顕在化しない） |
 | 4 | 中 | 要判断 |
-| 5〜7 | 低 | 保留可 |
+| 5 | 低 | **対応済み** — リンク文言を修正 |
+| 6・7 | 低 | 保留可 |
+| 14 | 中 | **対応済み** — mkdocs.yml をテンプレート既定値から実値へ |
 | 10〜13 | 中〜低 | 別途対応（記事シリーズ外、または加筆量が大きいもの） |
 
 ## 参照
