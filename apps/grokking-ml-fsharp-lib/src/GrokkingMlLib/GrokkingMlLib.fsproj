@@ -29,9 +29,11 @@
     <Compile Include="Nb16PlottingBoundaries.fs" />
     <Compile Include="Nb17BuildingDatasets.fs" />
     <Compile Include="Nb18CalculatingSimilarities.fs" />
+    <Compile Include="Nb19SvmKernels.fs" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Accord.MachineLearning" Version="3.8.0" />
     <PackageReference Include="Accord.Neuro" Version="3.8.0" />
     <PackageReference Include="Accord.Statistics" Version="3.8.0" />
     <PackageReference Include="Deedle" Version="8.0.0" />

@@ -29,6 +29,7 @@
     <Compile Include="Nb16PlottingBoundariesTests.fs" />
     <Compile Include="Nb17BuildingDatasetsTests.fs" />
     <Compile Include="Nb18CalculatingSimilaritiesTests.fs" />
+    <Compile Include="Nb19SvmKernelsTests.fs" />
   </ItemGroup>
 
   <ItemGroup>
