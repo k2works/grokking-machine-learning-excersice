@@ -15,6 +15,6 @@
   // 2000 件超の既存違反を抱えており、本シリーズのリリース品質ゲートで
   // それらを落とすと無関係な一括修正を強いることになるため、いまは対象外とする。
   // 既存文書を整えたら globs を docs/**/*.md に広げる。
-  "globs": ["docs/article/grokking-machine-learning/**/*.md"],
+  "globs": ["README.md", "docs/article/grokking-machine-learning/**/*.md", "docs/review/*.md"],
   "ignores": ["node_modules/**", "site/**"]
 }
