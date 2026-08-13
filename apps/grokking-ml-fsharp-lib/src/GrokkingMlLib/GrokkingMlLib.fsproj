@@ -26,6 +26,7 @@
     <Compile Include="Nb13NeuralNetworkBoundary.fs" />
     <Compile Include="Nb14HousePriceNetwork.fs" />
     <Compile Include="Nb15ImageRecognition.fs" />
+    <Compile Include="Nb16PlottingBoundaries.fs" />
   </ItemGroup>
 
   <ItemGroup>
