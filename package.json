@@ -18,7 +18,23 @@
     "claude:yolo": "claude --dangerously-skip-permissions",
     "copilot:yolo": "copilot --allow-all-tools",
     "codex:yolo": "codex --yolo",
-    "gemini:yolo": "gemini --yolo"
+    "gemini:yolo": "gemini --yolo",
+    "lint": "gulp notebooks:check && npm run lint:docs && npm run lint:python",
+    "lint:docs": "markdownlint-cli2",
+    "lint:python": "cd apps/grokking-ml-python && uv run ruff check .",
+    "test": "npm run test:python && npm run test:kotlin && npm run test:fsharp",
+    "test:python": "cd apps/grokking-ml-python && uv run pytest -q",
+    "test:kotlin": "cd apps/grokking-ml-kotlin && ./gradlew test",
+    "test:fsharp": "cd apps/grokking-ml-fsharp && dotnet test",
+    "test:e2e": "node ops/scripts/no-e2e.js",
+    "build": "npm run build:kotlin && npm run build:fsharp && npm run docs:build",
+    "build:kotlin": "cd apps/grokking-ml-kotlin && ./gradlew jar",
+    "build:fsharp": "cd apps/grokking-ml-fsharp && dotnet build",
+    "release:dry-run": "gulp release:dry-run",
+    "release:preflight": "gulp release:preflight",
+    "release:patch": "gulp release:patch",
+    "release:minor": "gulp release:minor",
+    "release:major": "gulp release:major"
   },
   "repository": {
     "type": "git",
@@ -41,5 +57,8 @@
     "gulp": "^5.0.0",
     "marked": "^18.0.9",
     "plantuml-encoder": "^1.4.0"
+  },
+  "devDependencies": {
+    "markdownlint-cli2": "^0.18.1"
   }
 }

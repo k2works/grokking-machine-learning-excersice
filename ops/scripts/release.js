@@ -425,7 +425,12 @@ export default function (gulp, options = {}) {
   // release:deploy:* (release + deploy)
   // ──────────────────────────────────────────────
 
-  gulp.task('release:deploy:patch', gulp.series('release:patch', 'deploy:prd'));
-  gulp.task('release:deploy:minor', gulp.series('release:minor', 'deploy:prd'));
-  gulp.task('release:deploy:major', gulp.series('release:major', 'deploy:prd'));
+  // デプロイタスクを持たないプロジェクト（ドキュメント・サンプル中心のリポジトリなど）
+  // では deploy:prd が存在しない。その場合に release:deploy:* を登録すると
+  // gulpfile の読み込み自体が失敗するため、存在するときだけ登録する。
+  if (gulp.task('deploy:prd')) {
+    gulp.task('release:deploy:patch', gulp.series('release:patch', 'deploy:prd'));
+    gulp.task('release:deploy:minor', gulp.series('release:minor', 'deploy:prd'));
+    gulp.task('release:deploy:major', gulp.series('release:major', 'deploy:prd'));
+  }
 }
