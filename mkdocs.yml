@@ -170,16 +170,19 @@ nav:
               - '#01 線形回帰を 3 つのトリックで学習する': grokking-machine-learning/lib/python/nb01.md
               - '#02 ハイデラバードの住宅価格を予測する': grokking-machine-learning/lib/python/nb02.md
               - '#03 多項式回帰と L1・L2 正則化': grokking-machine-learning/lib/python/nb03.md
+              - '#04 パーセプトロンで直線を引く': grokking-machine-learning/lib/python/nb04.md
           - Kotlin 版:
               - 目次: grokking-machine-learning/lib/kotlin/index.md
               - '#01 線形回帰を 3 つのトリックで学習する': grokking-machine-learning/lib/kotlin/nb01.md
               - '#02 ハイデラバードの住宅価格を予測する': grokking-machine-learning/lib/kotlin/nb02.md
               - '#03 多項式回帰と L1・L2 正則化': grokking-machine-learning/lib/kotlin/nb03.md
+              - '#04 パーセプトロンで直線を引く': grokking-machine-learning/lib/kotlin/nb04.md
           - F# 版:
               - 目次: grokking-machine-learning/lib/fsharp/index.md
               - '#01 線形回帰を 3 つのトリックで学習する': grokking-machine-learning/lib/fsharp/nb01.md
               - '#02 ハイデラバードの住宅価格を予測する': grokking-machine-learning/lib/fsharp/nb02.md
               - '#03 多項式回帰と L1・L2 正則化': grokking-machine-learning/lib/fsharp/nb03.md
+              - '#04 パーセプトロンで直線を引く': grokking-machine-learning/lib/fsharp/nb04.md
   - 他のシリーズ:
       - テスト駆動開発から始めるプログラミング入門: getting-start-tdd/index.md
       - Grokking Functional Programming: grokkingfp/index.md
