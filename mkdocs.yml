@@ -163,6 +163,11 @@ nav:
               - 第 11 章 SVM とカーネル法: grokking-machine-learning/fsharp/notebooks/ch11.ipynb
               - 第 12 章 アンサンブル学習: grokking-machine-learning/fsharp/notebooks/ch12.ipynb
               - 第 13 章 エンドツーエンドの実例: grokking-machine-learning/fsharp/notebooks/ch13.ipynb
+      - ライブラリ版:
+          - 概要: grokking-machine-learning/lib/index.md
+          - Python 版: grokking-machine-learning/lib/python/index.md
+          - Kotlin 版: grokking-machine-learning/lib/kotlin/index.md
+          - F# 版: grokking-machine-learning/lib/fsharp/index.md
   - 他のシリーズ:
       - テスト駆動開発から始めるプログラミング入門: getting-start-tdd/index.md
       - Grokking Functional Programming: grokkingfp/index.md

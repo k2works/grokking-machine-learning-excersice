@@ -5,6 +5,10 @@
 
 ライブラリの `fit()` を呼ぶのではなく、線形回帰の重み更新や決定木の分割基準を **自分の手で書く** ことで、アルゴリズムの中身を理解することを目的にしています。同じアルゴリズムを 3 言語で書き比べると、手続き型・オブジェクト指向・関数型それぞれの表現の違いも見えてきます。
 
+さらにもう 1 つの軸として、原著のノートブック 22 本を **主流の ML ライブラリで忠実に再現** する
+[ライブラリ版](lib/index.md) があります。同じ問題を「自分で書いた場合」と「ライブラリに任せた場合」で
+読み比べられます。
+
 ## 3 言語統合比較
 
 章ごとに 3 言語の実装を並べて比較する統合記事です。
@@ -67,13 +71,31 @@ F#（.NET 10）のレコード型・判別共用体・パイプライン演算�
 
 執筆計画の詳細は [アウトライン](outline.md) を参照してください。
 
+## ライブラリ版
+
+原著のノートブック 22 本を、各言語の主流 ML ライブラリで忠実に再現する軸です。
+自前実装版で書いた処理が、ライブラリではどの API に対応するのかを突き合わせられます。
+
+- [ライブラリ版 索引](lib/index.md)
+
+| 言語 | 主なライブラリ | 解説 |
+| :--- | :--- | :--- |
+| Python | NumPy / pandas / scikit-learn / Keras / XGBoost | [Python 版](lib/python/index.md) |
+| Kotlin | Multik / Kotlin DataFrame / Smile / XGBoost4J / Kandy | [Kotlin 版](lib/kotlin/index.md) |
+| F# | Math.NET / Deedle / ML.NET / Accord.Neuro / Plotly.NET | [F# 版](lib/fsharp/index.md) |
+
 ## サンプルコード
 
-| 言語 | ディレクトリ | テスト実行 | テスト数 |
-| :--- | :--- | :--- | ---: |
-| Python | `apps/grokking-ml-python` | `uv run pytest` | 179 |
-| Kotlin | `apps/grokking-ml-kotlin` | `./gradlew test` | 178 |
-| F# | `apps/grokking-ml-fsharp` | `dotnet test` | 176 |
+| 軸 | 言語 | ディレクトリ | テスト実行 | テスト数 |
+| :--- | :--- | :--- | :--- | ---: |
+| 自前実装 | Python | `apps/grokking-ml-python` | `uv run pytest` | 179 |
+| 自前実装 | Kotlin | `apps/grokking-ml-kotlin` | `./gradlew test` | 178 |
+| 自前実装 | F# | `apps/grokking-ml-fsharp` | `dotnet test` | 176 |
+| ライブラリ | Python | `apps/grokking-ml-python-lib` | `uv run pytest` | 5 |
+| ライブラリ | Kotlin | `apps/grokking-ml-kotlin-lib` | `./gradlew test` | 6 |
+| ライブラリ | F# | `apps/grokking-ml-fsharp-lib` | `dotnet test` | 6 |
+
+ライブラリ版はまだ環境整備の段階で、テストは実行環境のスモークテストのみです。
 
 記事に載せたコードと数値は、すべてこの実装から転記しています。
 
