@@ -72,6 +72,8 @@ apps/
 | CI | サンプル実装 3 言語のテスト実行（`.github/workflows/grokking-ml.yml`） | 完了 |
 | 全 13 章の執筆 | 第 1・2 章は `all/` に概念解説、第 3〜13 章は 3 言語 + 統合比較 | 完了 |
 | テスト | Python 179・Kotlin 178・F# 176 がグリーン | 完了 |
+| ノートブック | Jupyter / Kotlin Notebook / Polyglot Notebook を各 11 章分（計 33 本）、実行済み出力つき | 完了 |
+| ノートブックのサイト掲載 | mkdocs-jupyter で記事として描画（`gulp notebooks:sync` で取り込み） | 完了 |
 
 ## 章別執筆計画
 

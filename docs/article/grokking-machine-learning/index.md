@@ -77,6 +77,20 @@ F#（.NET 10）のレコード型・判別共用体・パイプライン演算�
 
 記事に載せたコードと数値は、すべてこの実装から転記しています。
 
+## ノートブック
+
+各章の実験は、3 種類のノートブックでも試せます。**実装本体を読み込んで動かす** ので、
+記事・実装・ノートブックの 3 者が食い違いません。値を変えてその場で確かめられます。
+
+| 言語 | 種類 | 一覧 | 実行環境 |
+| :--- | :--- | :--- | :--- |
+| Python | Jupyter Notebook | [Python 版の目次](python/index.md#jupyter-notebook) | `uv run jupyter lab` |
+| Kotlin | Kotlin Notebook | [Kotlin 版の目次](kotlin/index.md#kotlin-notebook) | IntelliJ IDEA / Kotlin Jupyter カーネル |
+| F# | Polyglot Notebook | [F# 版の目次](fsharp/index.md#polyglot-notebook) | VS Code Polyglot Notebooks / .NET Interactive |
+
+ノートブックの正本は `apps/grokking-ml-*/notebooks/` にあります（実装を相対パスで読み込むため）。
+ドキュメントサイトへはビルド時に取り込んでいます。
+
 ## 全 13 章を通して見えたこと
 
 同じアルゴリズムを 3 言語で書くと、**言語機能とアルゴリズムの構造が噛み合う場面** がはっきりします。
