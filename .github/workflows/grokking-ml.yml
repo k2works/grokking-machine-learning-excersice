@@ -7,12 +7,14 @@ on:
       - 'apps/grokking-ml-kotlin/**'
       - 'apps/grokking-ml-fsharp/**'
       - '.github/workflows/grokking-ml.yml'
+      - 'ops/scripts/notebooks.js'
   pull_request:
     paths:
       - 'apps/grokking-ml-python/**'
       - 'apps/grokking-ml-kotlin/**'
       - 'apps/grokking-ml-fsharp/**'
       - '.github/workflows/grokking-ml.yml'
+      - 'ops/scripts/notebooks.js'
 
 jobs:
   python:
@@ -72,3 +74,21 @@ jobs:
 
       - name: Test
         run: dotnet test
+
+  notebooks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: latest
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      # ノートブックは出力込みで commit する。未実行のまま入り込むのを防ぐ
+      - name: Check notebooks are executed
+        run: npm run notebooks:check

@@ -57,6 +57,12 @@ extra:
 
 plugins:
   - search
+  # ノートブックを記事として描画する（実行はしない。出力は保存済み）
+  - mkdocs-jupyter:
+      include_source: true
+      execute: false
+      ignore_h1_titles: false
+      show_input: true
 
 exclude_docs: |
   wiki
@@ -114,6 +120,18 @@ nav:
               - 第 11 章 SVM とカーネル法: article/grokking-machine-learning/python/ch11.md
               - 第 12 章 アンサンブル学習: article/grokking-machine-learning/python/ch12.md
               - 第 13 章 エンドツーエンドの実例: article/grokking-machine-learning/python/ch13.md
+              - Jupyter Notebook:
+                  - 第 3 章 線形回帰: article/grokking-machine-learning/python/notebooks/ch03.ipynb
+                  - 第 4 章 過学習・未学習と正則化: article/grokking-machine-learning/python/notebooks/ch04.ipynb
+                  - 第 5 章 パーセプトロン: article/grokking-machine-learning/python/notebooks/ch05.ipynb
+                  - 第 6 章 ロジスティック回帰: article/grokking-machine-learning/python/notebooks/ch06.ipynb
+                  - 第 7 章 分類モデルの評価指標: article/grokking-machine-learning/python/notebooks/ch07.ipynb
+                  - 第 8 章 ナイーブベイズ: article/grokking-machine-learning/python/notebooks/ch08.ipynb
+                  - 第 9 章 決定木: article/grokking-machine-learning/python/notebooks/ch09.ipynb
+                  - 第 10 章 ニューラルネットワーク: article/grokking-machine-learning/python/notebooks/ch10.ipynb
+                  - 第 11 章 SVM とカーネル法: article/grokking-machine-learning/python/notebooks/ch11.ipynb
+                  - 第 12 章 アンサンブル学習: article/grokking-machine-learning/python/notebooks/ch12.ipynb
+                  - 第 13 章 エンドツーエンドの実例: article/grokking-machine-learning/python/notebooks/ch13.ipynb
           - Kotlin 版:
               - 概要: article/grokking-machine-learning/kotlin/index.md
               - 第 3 章 線形回帰: article/grokking-machine-learning/kotlin/ch03.md
@@ -127,6 +145,18 @@ nav:
               - 第 11 章 SVM とカーネル法: article/grokking-machine-learning/kotlin/ch11.md
               - 第 12 章 アンサンブル学習: article/grokking-machine-learning/kotlin/ch12.md
               - 第 13 章 エンドツーエンドの実例: article/grokking-machine-learning/kotlin/ch13.md
+              - Kotlin Notebook:
+                  - 第 3 章 線形回帰: article/grokking-machine-learning/kotlin/notebooks/ch03.ipynb
+                  - 第 4 章 過学習・未学習と正則化: article/grokking-machine-learning/kotlin/notebooks/ch04.ipynb
+                  - 第 5 章 パーセプトロン: article/grokking-machine-learning/kotlin/notebooks/ch05.ipynb
+                  - 第 6 章 ロジスティック回帰: article/grokking-machine-learning/kotlin/notebooks/ch06.ipynb
+                  - 第 7 章 分類モデルの評価指標: article/grokking-machine-learning/kotlin/notebooks/ch07.ipynb
+                  - 第 8 章 ナイーブベイズ: article/grokking-machine-learning/kotlin/notebooks/ch08.ipynb
+                  - 第 9 章 決定木: article/grokking-machine-learning/kotlin/notebooks/ch09.ipynb
+                  - 第 10 章 ニューラルネットワーク: article/grokking-machine-learning/kotlin/notebooks/ch10.ipynb
+                  - 第 11 章 SVM とカーネル法: article/grokking-machine-learning/kotlin/notebooks/ch11.ipynb
+                  - 第 12 章 アンサンブル学習: article/grokking-machine-learning/kotlin/notebooks/ch12.ipynb
+                  - 第 13 章 エンドツーエンドの実例: article/grokking-machine-learning/kotlin/notebooks/ch13.ipynb
           - F# 版:
               - 概要: article/grokking-machine-learning/fsharp/index.md
               - 第 3 章 線形回帰: article/grokking-machine-learning/fsharp/ch03.md
@@ -140,6 +170,18 @@ nav:
               - 第 11 章 SVM とカーネル法: article/grokking-machine-learning/fsharp/ch11.md
               - 第 12 章 アンサンブル学習: article/grokking-machine-learning/fsharp/ch12.md
               - 第 13 章 エンドツーエンドの実例: article/grokking-machine-learning/fsharp/ch13.md
+              - Polyglot Notebook:
+                  - 第 3 章 線形回帰: article/grokking-machine-learning/fsharp/notebooks/ch03.ipynb
+                  - 第 4 章 過学習・未学習と正則化: article/grokking-machine-learning/fsharp/notebooks/ch04.ipynb
+                  - 第 5 章 パーセプトロン: article/grokking-machine-learning/fsharp/notebooks/ch05.ipynb
+                  - 第 6 章 ロジスティック回帰: article/grokking-machine-learning/fsharp/notebooks/ch06.ipynb
+                  - 第 7 章 分類モデルの評価指標: article/grokking-machine-learning/fsharp/notebooks/ch07.ipynb
+                  - 第 8 章 ナイーブベイズ: article/grokking-machine-learning/fsharp/notebooks/ch08.ipynb
+                  - 第 9 章 決定木: article/grokking-machine-learning/fsharp/notebooks/ch09.ipynb
+                  - 第 10 章 ニューラルネットワーク: article/grokking-machine-learning/fsharp/notebooks/ch10.ipynb
+                  - 第 11 章 SVM とカーネル法: article/grokking-machine-learning/fsharp/notebooks/ch11.ipynb
+                  - 第 12 章 アンサンブル学習: article/grokking-machine-learning/fsharp/notebooks/ch12.ipynb
+                  - 第 13 章 エンドツーエンドの実例: article/grokking-machine-learning/fsharp/notebooks/ch13.ipynb
       - 実践データベース設計：基幹業務システム編: article/practical-database-design/index.md
       - Docker/Kubernetes 実践コンテナ解説: article/getting-start-docker-kubernetes/index.md
   - リファレンス:

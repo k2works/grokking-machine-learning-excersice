@@ -7,7 +7,8 @@ RUN pip install --no-cache-dir \
     mkdocs \
     mkdocs-material \
     pymdown-extensions \
-    plantuml-markdown
+    plantuml-markdown \
+    mkdocs-jupyter
 
 # Copy configuration and docs
 COPY mkdocs.yml /docs/

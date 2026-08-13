@@ -5,9 +5,11 @@
   "scripts": {
     "start": "gulp spec",
     "journal": "gulp journal:generate",
-    "docs:serve": "gulp mkdocs:serve",
+    "docs:serve": "gulp docsServe",
     "docs:stop": "gulp mkdocs:stop",
-    "docs:build": "gulp mkdocs:build",
+    "docs:build": "gulp docsBuild",
+    "docs:notebooks": "gulp notebooks:sync",
+    "notebooks:check": "gulp notebooks:check",
     "manual:build": "gulp manual:build",
     "vault:encrypt": "gulp vault:encrypt",
     "vault:decrypt": "gulp vault:decrypt",
