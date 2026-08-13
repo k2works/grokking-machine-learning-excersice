@@ -174,7 +174,7 @@ CI では `libomp-dev` を入れて解決しています。
 | スモークテスト | 各言語で主要ライブラリが学習まで走ることを検証（Python 5・Kotlin 6・F# 6） | 完了 |
 | 記事ディレクトリ | `docs/article/grokking-machine-learning/lib/{python,kotlin,fsharp}/` | 完了 |
 | CI | `.github/workflows/grokking-ml-lib.yml`（3 言語、Kotlin は JDK 21 / 25） | 完了 |
-| 22 本の執筆 | 3 言語 × 22 本 | #01〜#05 完了（残り 17 本） |
+| 22 本の執筆 | 3 言語 × 22 本 | #01〜#06 完了（残り 16 本） |
 | ノートブック | Jupyter / Kotlin Notebook / Polyglot Notebook | 未着手 |
 
 ### ノートブック別執筆計画
@@ -188,7 +188,7 @@ CI では `libomp-dev` を入れて解決しています。
 | 03 | 04 | `Polynomial_regression_regularization` | 正則化が解を再現可能にする（執筆済み） | Smile の LASSO は厳密なゼロを出さない（執筆済み） | Ridge・Lasso を自前で実装（執筆済み） |
 | 04 | 05 | `Coding_perceptron_algorithm` | 原著のトリック 2 版の挙動差（執筆済み） | Smile にパーセプトロンが無く線形 SVM で代替（執筆済み） | ML.NET `AveragedPerceptron`（執筆済み） |
 | 05 | 06 | `Coding_logistic_regression` | 原著の対数損失の別表現が誤り（執筆済み） | `fit` が無く `binomial`・既定で正則化なし（執筆済み） | `LbfgsLogisticRegression`（執筆済み） |
-| 06 | 06 | `Sentiment_analysis_IMDB` | `CountVectorizer` のスパース行列 | Kotlin での語彙構築（既製の Vectorizer が無い） | ML.NET `FeaturizeText` |
+| 06 | 06 | `Sentiment_analysis_IMDB` | `CountVectorizer` の 4 規則（執筆済み） | 自前ベクトル化 + 疎行列（執筆済み） | 自前ベクトル化 + 自前の勾配降下（執筆済み） |
 | 07 | 08 | `Coding_naive_Bayes` | pandas だけで書かれた原著をそのまま踏襲 | DataFrame の groupBy | Deedle の集計 |
 | 08 | 09 | `Gini_entropy_calculations` | NumPy のベクトル演算 | Multik の要素演算 | Math.NET のベクトル演算 |
 | 09 | 09 | `App_recommendations` | `DecisionTreeClassifier` の可視化 | Smile `DecisionTree` の `dot()` 出力 | ML.NET `FastTree` は木構造を露出しない |
@@ -206,5 +206,6 @@ CI では `libomp-dev` を入れて解決しています。
 | 21 | 12 | `Gradient_boosting_and_XGBoost` | `xgboost` をそのまま使う | XGBoost4J（同じ実装の JVM バインディング） | ML.NET `FastTree` で代替する理由 |
 | 22 | 13 | `End_to_end_example` | 前処理から評価までの流れ | 3 ライブラリをまたぐパイプライン | Deedle → ML.NET の受け渡し |
 
-第 15 章（MNIST）と第 6 章（IMDB）は、Kotlin・F# に既製のローダ／ベクトライザが無く、
-データ取得と特徴量化を自前で書く範囲が広がります。執筆時に必要なら方針を見直します。
+第 15 章（MNIST）は、Kotlin・F# に既製のローダが無く、データ取得を自前で書く範囲が広がります。
+第 6 章（IMDB）は執筆済みで、scikit-learn のストップワード 318 語を共有データセットに書き出し、
+3 言語で同じ語彙を作れるようにしました（語彙の添字まで一致）。

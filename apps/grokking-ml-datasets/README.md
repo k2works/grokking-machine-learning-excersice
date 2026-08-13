@@ -23,6 +23,22 @@
 `one_circle.csv` と `Hyderabad.csv` は原著では複数の章に同じ内容で重複して置かれています。
 ここでは 1 本にまとめました（バイト単位で同一であることを確認済み）。
 
+## 原著に無いファイル
+
+| ファイル | 内容 |
+| :--- | :--- |
+| `sklearn_english_stop_words.txt` | scikit-learn 内蔵の英語ストップワード 318 語 |
+
+第 6 章の感情分析（ノートブック #06）で `CountVectorizer(stop_words='english')` が
+除外する語の一覧です。Kotlin 版・F# 版には同等のリストが無く、これが違うと語彙が変わって
+3 言語の結果を比べられません。そこで scikit-learn 1.9.0 から書き出して共有しています。
+
+```bash
+python -c "from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS; print('\n'.join(sorted(ENGLISH_STOP_WORDS)))"
+```
+
+scikit-learn は BSD-3-Clause ライセンスです。
+
 ## リポジトリに入れていないファイル
 
 サイズが大きいので Git には含めず、初回利用時にダウンロードします。

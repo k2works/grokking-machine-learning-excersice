@@ -99,7 +99,7 @@ def test_正しい別の書き方は対数損失と厳密に一致する() -> No
 def test_ロジスティックトリックはバイアスを1回だけ動かす() -> None:
     # #04 の「短く書いた版」はバイアスをループの内側で更新していたが、
     # こちらは外側にあるので 1 回だけ適用される
-    weights, bias = logistic_trick([1.0, 1.0], 0.0, FEATURES[0], 0, learning_rate=0.05)
+    _, bias = logistic_trick([1.0, 1.0], 0.0, FEATURES[0], 0, learning_rate=0.05)
     pred = prediction([1.0, 1.0], 0.0, FEATURES[0])
 
     assert bias == pytest.approx(0.0 + (0 - pred) * 0.05)
