@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <!-- Deedle 8.0.0 が FSharp.Core >= 10.1.201 を要求する。SDK 同梱の 10.0.100 のままだと
+         NU1605（ダウングレード）警告が出るので、暗黙参照を切って明示的に固定する。 -->
+    <DisableImplicitFSharpCoreReference>true</DisableImplicitFSharpCoreReference>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FSharp.Core" Version="10.1.400" />
+    <Compile Include="Datasets.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Accord.Neuro" Version="3.8.0" />
+    <PackageReference Include="Accord.Statistics" Version="3.8.0" />
+    <PackageReference Include="Deedle" Version="8.0.0" />
+    <PackageReference Include="MathNet.Numerics" Version="5.0.0" />
+    <PackageReference Include="MathNet.Numerics.FSharp" Version="5.0.0" />
+    <PackageReference Include="Microsoft.ML" Version="5.0.0" />
+    <PackageReference Include="Plotly.NET" Version="5.1.0" />
+  </ItemGroup>
+
+</Project>

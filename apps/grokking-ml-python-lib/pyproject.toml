@@ -1,0 +1,38 @@
+[project]
+name = "grokking-ml-lib"
+version = "0.1.0"
+description = "Grokking Machine Learning の原著ノートブックを ML ライブラリで忠実に再現したサンプル"
+# TensorFlow 2.16 系が対応する Python は 3.12 まで。原著の Keras コードを
+# そのまま動かすため、この範囲に固定する。
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "numpy>=1.26",
+    "pandas>=2.2",
+    "scikit-learn>=1.5",
+    "matplotlib>=3.8",
+    "xgboost>=2.1",
+    # 2.16.2 は macOS x86_64 向け wheel を提供する最後の系列
+    "tensorflow==2.16.2",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.6",
+    "ipykernel>=7.3.0",
+    "jupyterlab>=4.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/grokking_ml_lib"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
