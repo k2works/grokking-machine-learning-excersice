@@ -31,6 +31,9 @@ kotlin {
 
 tasks.test {
     useJUnitPlatform()
+    // #15 の MNIST は 6 万枚 × 784 画素を double で持つので 400 MB 近くになる。
+    // 既定のヒープではテスト用 JVM が落ちる（java.io.EOFException として現れる）
+    maxHeapSize = "4g"
     testLogging {
         events("passed", "failed", "skipped")
     }

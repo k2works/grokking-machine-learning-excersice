@@ -32,6 +32,7 @@
     <Compile Include="Nb19SvmKernels.fs" />
     <Compile Include="Nb20EnsembleSpam.fs" />
     <Compile Include="Nb21GradientBoosting.fs" />
+    <Compile Include="Nb22TitanicEndToEnd.fs" />
   </ItemGroup>
 
   <ItemGroup>
