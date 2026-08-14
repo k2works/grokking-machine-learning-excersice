@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <!-- Deedle 8.0.0 が FSharp.Core >= 10.1.201 を要求する。SDK 同梱の 10.0.100 のままだと
+         NU1605（ダウングレード）警告が出るので、暗黙参照を切って明示的に固定する。 -->
+    <DisableImplicitFSharpCoreReference>true</DisableImplicitFSharpCoreReference>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FSharp.Core" Version="10.1.400" />
+    <Compile Include="Datasets.fs" />
+    <Compile Include="Nb01LinearRegression.fs" />
+    <Compile Include="Nb02HousePrices.fs" />
+    <Compile Include="Nb03PolynomialRegularization.fs" />
+    <Compile Include="Nb04Perceptron.fs" />
+    <Compile Include="Nb05LogisticRegression.fs" />
+    <Compile Include="Nb06SentimentImdb.fs" />
+    <Compile Include="Nb07NaiveBayes.fs" />
+    <Compile Include="Nb08GiniEntropy.fs" />
+    <Compile Include="Nb09AppRecommendations.fs" />
+    <Compile Include="Nb10DecisionTreeBoundary.fs" />
+    <Compile Include="Nb11UniversityAdmissions.fs" />
+    <Compile Include="Nb12RegressionTree.fs" />
+    <Compile Include="Nb13NeuralNetworkBoundary.fs" />
+    <Compile Include="Nb14HousePriceNetwork.fs" />
+    <Compile Include="Nb15ImageRecognition.fs" />
+    <Compile Include="Nb16PlottingBoundaries.fs" />
+    <Compile Include="Nb17BuildingDatasets.fs" />
+    <Compile Include="Nb18CalculatingSimilarities.fs" />
+    <Compile Include="Nb19SvmKernels.fs" />
+    <Compile Include="Nb20EnsembleSpam.fs" />
+    <Compile Include="Nb21GradientBoosting.fs" />
+    <Compile Include="Nb22TitanicEndToEnd.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Accord.MachineLearning" Version="3.8.0" />
+    <PackageReference Include="Accord.Neuro" Version="3.8.0" />
+    <PackageReference Include="Accord.Statistics" Version="3.8.0" />
+    <PackageReference Include="Deedle" Version="8.0.0" />
+    <PackageReference Include="MathNet.Numerics" Version="5.0.0" />
+    <PackageReference Include="MathNet.Numerics.FSharp" Version="5.0.0" />
+    <PackageReference Include="Microsoft.ML" Version="5.0.0" />
+    <PackageReference Include="Plotly.NET" Version="5.1.0" />
+  </ItemGroup>
+
+</Project>

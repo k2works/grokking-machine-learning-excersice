@@ -1,0 +1,92 @@
+name: Grokking ML Library Samples
+
+# ライブラリ版（原著ノートブックの再現）のサンプル実装を検証する。
+# 自前実装版とは依存関係も Python のバージョンも違うので、ワークフローを分けている。
+on:
+  push:
+    paths:
+      - 'apps/grokking-ml-python-lib/**'
+      - 'apps/grokking-ml-kotlin-lib/**'
+      - 'apps/grokking-ml-fsharp-lib/**'
+      - 'apps/grokking-ml-datasets/**'
+      - '.github/workflows/grokking-ml-lib.yml'
+      - 'ops/nix/environments/python-ml/**'
+  pull_request:
+    paths:
+      - 'apps/grokking-ml-python-lib/**'
+      - 'apps/grokking-ml-kotlin-lib/**'
+      - 'apps/grokking-ml-fsharp-lib/**'
+      - 'apps/grokking-ml-datasets/**'
+      - '.github/workflows/grokking-ml-lib.yml'
+      - 'ops/nix/environments/python-ml/**'
+
+jobs:
+  python:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: apps/grokking-ml-python-lib
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      # XGBoost の wheel が libomp を要求する。devShell と同じ依存を CI にも用意する
+      - name: Install libomp
+        run: sudo apt-get update && sudo apt-get install -y libomp-dev
+
+      - name: Install dependencies
+        run: uv sync
+
+      - name: Lint
+        run: uv run ruff check .
+
+      - name: Test
+        run: uv run pytest
+
+  kotlin:
+    runs-on: ubuntu-latest
+    # 自前実装版と同じ理由で JDK を 2 つで検証する。
+    # 1 つに固定していると、読者の新しい JDK でビルドが壊れる問題を素通りさせる。
+    strategy:
+      fail-fast: false
+      matrix:
+        java: ['21', '25']
+    defaults:
+      run:
+        working-directory: apps/grokking-ml-kotlin-lib
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up JDK ${{ matrix.java }}
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: ${{ matrix.java }}
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+
+      # clean を付けないと、キャッシュされた成果物で UP-TO-DATE になり
+      # コンパイル自体が走らないことがある
+      - name: Test
+        run: ./gradlew clean test
+
+  fsharp:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: apps/grokking-ml-fsharp-lib
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Test
+        run: dotnet test

@@ -163,6 +163,80 @@ nav:
               - 第 11 章 SVM とカーネル法: grokking-machine-learning/fsharp/notebooks/ch11.ipynb
               - 第 12 章 アンサンブル学習: grokking-machine-learning/fsharp/notebooks/ch12.ipynb
               - 第 13 章 エンドツーエンドの実例: grokking-machine-learning/fsharp/notebooks/ch13.ipynb
+      - ライブラリ版:
+          - 概要: grokking-machine-learning/lib/index.md
+          - Python 版:
+              - 目次: grokking-machine-learning/lib/python/index.md
+              - '#01 線形回帰を 3 つのトリックで学習する': grokking-machine-learning/lib/python/nb01.md
+              - '#02 ハイデラバードの住宅価格を予測する': grokking-machine-learning/lib/python/nb02.md
+              - '#03 多項式回帰と L1・L2 正則化': grokking-machine-learning/lib/python/nb03.md
+              - '#04 パーセプトロンで直線を引く': grokking-machine-learning/lib/python/nb04.md
+              - '#05 ロジスティック回帰の学習': grokking-machine-learning/lib/python/nb05.md
+              - '#06 IMDB レビューの感情分析': grokking-machine-learning/lib/python/nb06.md
+              - '#07 ナイーブベイズでスパム判定': grokking-machine-learning/lib/python/nb07.md
+              - '#08 ジニ不純度とエントロピーの計算': grokking-machine-learning/lib/python/nb08.md
+              - '#09 アプリ推薦の決定木': grokking-machine-learning/lib/python/nb09.md
+              - '#10 決定木の境界を図示する': grokking-machine-learning/lib/python/nb10.md
+              - '#11 大学院入学審査の決定木': grokking-machine-learning/lib/python/nb11.md
+              - '#12 回帰木': grokking-machine-learning/lib/python/nb12.md
+              - '#13 ニューラルネットワークの境界': grokking-machine-learning/lib/python/nb13.md
+              - '#14 ニューラルネットワークで住宅価格を予測': grokking-machine-learning/lib/python/nb14.md
+              - '#15 手書き数字を認識する': grokking-machine-learning/lib/python/nb15.md
+              - '#16 ネットワークの境界を描く': grokking-machine-learning/lib/python/nb16.md
+              - '#17 SVM 用のデータセットを作る': grokking-machine-learning/lib/python/nb17.md
+              - '#18 類似度行列で RBF カーネルを分解する': grokking-machine-learning/lib/python/nb18.md
+              - '#19 カーネルとハイパーパラメータを比べる': grokking-machine-learning/lib/python/nb19.md
+              - '#20 ランダムフォレストと AdaBoost': grokking-machine-learning/lib/python/nb20.md
+              - '#21 勾配ブースティングと XGBoost': grokking-machine-learning/lib/python/nb21.md
+              - '#22 タイタニックで通しの機械学習': grokking-machine-learning/lib/python/nb22.md
+          - Kotlin 版:
+              - 目次: grokking-machine-learning/lib/kotlin/index.md
+              - '#01 線形回帰を 3 つのトリックで学習する': grokking-machine-learning/lib/kotlin/nb01.md
+              - '#02 ハイデラバードの住宅価格を予測する': grokking-machine-learning/lib/kotlin/nb02.md
+              - '#03 多項式回帰と L1・L2 正則化': grokking-machine-learning/lib/kotlin/nb03.md
+              - '#04 パーセプトロンで直線を引く': grokking-machine-learning/lib/kotlin/nb04.md
+              - '#05 ロジスティック回帰の学習': grokking-machine-learning/lib/kotlin/nb05.md
+              - '#06 IMDB レビューの感情分析': grokking-machine-learning/lib/kotlin/nb06.md
+              - '#07 ナイーブベイズでスパム判定': grokking-machine-learning/lib/kotlin/nb07.md
+              - '#08 ジニ不純度とエントロピーの計算': grokking-machine-learning/lib/kotlin/nb08.md
+              - '#09 アプリ推薦の決定木': grokking-machine-learning/lib/kotlin/nb09.md
+              - '#10 決定木の境界を図示する': grokking-machine-learning/lib/kotlin/nb10.md
+              - '#11 大学院入学審査の決定木': grokking-machine-learning/lib/kotlin/nb11.md
+              - '#12 回帰木': grokking-machine-learning/lib/kotlin/nb12.md
+              - '#13 ニューラルネットワークの境界': grokking-machine-learning/lib/kotlin/nb13.md
+              - '#14 ニューラルネットワークで住宅価格を予測': grokking-machine-learning/lib/kotlin/nb14.md
+              - '#15 手書き数字を認識する': grokking-machine-learning/lib/kotlin/nb15.md
+              - '#16 ネットワークの境界を描く': grokking-machine-learning/lib/kotlin/nb16.md
+              - '#17 SVM 用のデータセットを作る': grokking-machine-learning/lib/kotlin/nb17.md
+              - '#18 類似度行列で RBF カーネルを分解する': grokking-machine-learning/lib/kotlin/nb18.md
+              - '#19 カーネルとハイパーパラメータを比べる': grokking-machine-learning/lib/kotlin/nb19.md
+              - '#20 ランダムフォレストと AdaBoost': grokking-machine-learning/lib/kotlin/nb20.md
+              - '#21 勾配ブースティングと XGBoost': grokking-machine-learning/lib/kotlin/nb21.md
+              - '#22 タイタニックで通しの機械学習': grokking-machine-learning/lib/kotlin/nb22.md
+          - F# 版:
+              - 目次: grokking-machine-learning/lib/fsharp/index.md
+              - '#01 線形回帰を 3 つのトリックで学習する': grokking-machine-learning/lib/fsharp/nb01.md
+              - '#02 ハイデラバードの住宅価格を予測する': grokking-machine-learning/lib/fsharp/nb02.md
+              - '#03 多項式回帰と L1・L2 正則化': grokking-machine-learning/lib/fsharp/nb03.md
+              - '#04 パーセプトロンで直線を引く': grokking-machine-learning/lib/fsharp/nb04.md
+              - '#05 ロジスティック回帰の学習': grokking-machine-learning/lib/fsharp/nb05.md
+              - '#06 IMDB レビューの感情分析': grokking-machine-learning/lib/fsharp/nb06.md
+              - '#07 ナイーブベイズでスパム判定': grokking-machine-learning/lib/fsharp/nb07.md
+              - '#08 ジニ不純度とエントロピーの計算': grokking-machine-learning/lib/fsharp/nb08.md
+              - '#09 アプリ推薦の決定木': grokking-machine-learning/lib/fsharp/nb09.md
+              - '#10 決定木の境界を図示する': grokking-machine-learning/lib/fsharp/nb10.md
+              - '#11 大学院入学審査の決定木': grokking-machine-learning/lib/fsharp/nb11.md
+              - '#12 回帰木': grokking-machine-learning/lib/fsharp/nb12.md
+              - '#13 ニューラルネットワークの境界': grokking-machine-learning/lib/fsharp/nb13.md
+              - '#14 ニューラルネットワークで住宅価格を予測': grokking-machine-learning/lib/fsharp/nb14.md
+              - '#15 手書き数字を認識する': grokking-machine-learning/lib/fsharp/nb15.md
+              - '#16 ネットワークの境界を描く': grokking-machine-learning/lib/fsharp/nb16.md
+              - '#17 SVM 用のデータセットを作る': grokking-machine-learning/lib/fsharp/nb17.md
+              - '#18 類似度行列で RBF カーネルを分解する': grokking-machine-learning/lib/fsharp/nb18.md
+              - '#19 カーネルとハイパーパラメータを比べる': grokking-machine-learning/lib/fsharp/nb19.md
+              - '#20 ランダムフォレストと AdaBoost': grokking-machine-learning/lib/fsharp/nb20.md
+              - '#21 勾配ブースティングと XGBoost': grokking-machine-learning/lib/fsharp/nb21.md
+              - '#22 タイタニックで通しの機械学習': grokking-machine-learning/lib/fsharp/nb22.md
   - 他のシリーズ:
       - テスト駆動開発から始めるプログラミング入門: getting-start-tdd/index.md
       - Grokking Functional Programming: grokkingfp/index.md

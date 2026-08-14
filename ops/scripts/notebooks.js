@@ -15,6 +15,10 @@ const NOTEBOOK_SOURCES = [
   { app: 'apps/grokking-ml-python/notebooks', docs: 'docs/article/grokking-machine-learning/python/notebooks' },
   { app: 'apps/grokking-ml-kotlin/notebooks', docs: 'docs/article/grokking-machine-learning/kotlin/notebooks' },
   { app: 'apps/grokking-ml-fsharp/notebooks', docs: 'docs/article/grokking-machine-learning/fsharp/notebooks' },
+  // ライブラリ版（原著ノートブックの再現）
+  { app: 'apps/grokking-ml-python-lib/notebooks', docs: 'docs/article/grokking-machine-learning/lib/python/notebooks' },
+  { app: 'apps/grokking-ml-kotlin-lib/notebooks', docs: 'docs/article/grokking-machine-learning/lib/kotlin/notebooks' },
+  { app: 'apps/grokking-ml-fsharp-lib/notebooks', docs: 'docs/article/grokking-machine-learning/lib/fsharp/notebooks' },
 ];
 
 /**

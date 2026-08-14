@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <IsPackable>false</IsPackable>
+    <!-- Deedle 8.0.0 が FSharp.Core >= 10.1.201 を要求する。SDK 同梱の 10.0.100 のままだと
+         NU1605（ダウングレード）警告が出るので、暗黙参照を切って明示的に固定する。 -->
+    <DisableImplicitFSharpCoreReference>true</DisableImplicitFSharpCoreReference>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FSharp.Core" Version="10.1.400" />
+    <Compile Include="EnvironmentTests.fs" />
+    <Compile Include="Nb01LinearRegressionTests.fs" />
+    <Compile Include="Nb02HousePricesTests.fs" />
+    <Compile Include="Nb03PolynomialRegularizationTests.fs" />
+    <Compile Include="Nb04PerceptronTests.fs" />
+    <Compile Include="Nb05LogisticRegressionTests.fs" />
+    <Compile Include="Nb06SentimentImdbTests.fs" />
+    <Compile Include="Nb07NaiveBayesTests.fs" />
+    <Compile Include="Nb08GiniEntropyTests.fs" />
+    <Compile Include="Nb09AppRecommendationsTests.fs" />
+    <Compile Include="Nb10DecisionTreeBoundaryTests.fs" />
+    <Compile Include="Nb11UniversityAdmissionsTests.fs" />
+    <Compile Include="Nb12RegressionTreeTests.fs" />
+    <Compile Include="Nb13NeuralNetworkBoundaryTests.fs" />
+    <Compile Include="Nb14HousePriceNetworkTests.fs" />
+    <Compile Include="Nb15ImageRecognitionTests.fs" />
+    <Compile Include="Nb16PlottingBoundariesTests.fs" />
+    <Compile Include="Nb17BuildingDatasetsTests.fs" />
+    <Compile Include="Nb18CalculatingSimilaritiesTests.fs" />
+    <Compile Include="Nb19SvmKernelsTests.fs" />
+    <Compile Include="Nb20EnsembleSpamTests.fs" />
+    <Compile Include="Nb21GradientBoostingTests.fs" />
+    <Compile Include="Nb22TitanicEndToEndTests.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="coverlet.collector" Version="6.0.4" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
+    <PackageReference Include="xunit" Version="2.9.3" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="3.1.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\GrokkingMlLib\GrokkingMlLib.fsproj" />
+  </ItemGroup>
+
+</Project>
