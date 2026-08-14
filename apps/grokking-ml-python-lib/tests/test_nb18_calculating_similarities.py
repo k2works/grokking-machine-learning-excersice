@@ -139,11 +139,18 @@ def test_予測の符号は正解ラベルと合う(data) -> None:
 
 def test_対称な2点は同じ値になる(data) -> None:
     # (0,1) と (1,0)、(-1,1) と (1,-1) は x1 と x2 を入れ替えた関係。
-    # データ全体もその入れ替えで不変なので、予測値も一致する
+    # データ全体もその入れ替えで不変なので、予測値も一致する。
+    #
+    # ただし **ビット単位で同じにはならない**。np.dot は足す順序が変わりうるので、
+    # 数学的に等しくても最後の 1 桁がずれる。実際 CI（Linux）では
+    # 0.8650001793912899 と 0.8650001793912898 になった（macOS では一致した）。
+    # 対称性は 15 桁の一致で確かめる
     assert svm_rbf_prediction(data, [0, 1]) == pytest.approx(
         svm_rbf_prediction(data, [1, 0]), rel=1e-15
     )
-    assert svm_rbf_prediction(data, [-1, 1]) == svm_rbf_prediction(data, [1, -1])
+    assert svm_rbf_prediction(data, [-1, 1]) == pytest.approx(
+        svm_rbf_prediction(data, [1, -1]), rel=1e-15
+    )
 
 
 def test_遠く離れた点の予測は0に近づく(data) -> None:
