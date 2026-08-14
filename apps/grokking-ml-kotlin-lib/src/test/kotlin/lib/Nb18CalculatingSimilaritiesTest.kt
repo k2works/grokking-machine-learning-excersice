@@ -129,9 +129,12 @@ class Nb18CalculatingSimilaritiesTest {
             svmRbfPrediction(doubleArrayOf(1.0, 0.0)),
             1e-15,
         )
+        // 許容誤差を渡す。数学的には等しいが **ビット単位で同じとは限らない**。
+        // Python 版は CI（Linux）でここが 1 桁ずれて落ちた
         assertEquals(
             svmRbfPrediction(doubleArrayOf(-1.0, 1.0)),
             svmRbfPrediction(doubleArrayOf(1.0, -1.0)),
+            1e-15,
         )
     }
 
