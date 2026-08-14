@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.1] - 2026-08-14
+
+### Bug Fixes
+
+- dotnet test の連続実行がハングする問題を回避 (5d4455c)
+- F# #19 の RBF gamma=1 が OS で変わることに対応 (a3f490a)
+
 ## [0.2.0] - 2026-08-14
 
 ### Features
